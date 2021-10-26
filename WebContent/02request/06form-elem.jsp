@@ -10,8 +10,10 @@
 </head>
 <body>
 
+<form>
 <input name="key">
 <input type="submit">
+</form>
 
 
 <%
