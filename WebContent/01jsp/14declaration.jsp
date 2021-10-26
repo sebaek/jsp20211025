@@ -2,6 +2,24 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 
+<%!
+private int add(int a, int b) {
+	return a + b;
+}
+
+private int subtract(int a, int b) {
+	return a - b;
+}
+
+private int multiply(int i, int j) {
+	return i * j;
+}
+
+private int divide(int i, int j) {
+	return i / j;
+}
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,3 +35,9 @@
 <%= divide(99, 3) %> <br> <%-- 33 --%>
 </body>
 </html>
+
+
+
+
+
+
