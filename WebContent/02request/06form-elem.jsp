@@ -9,6 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<input name="key">
+<input type="submit">
+
+
 <%
 Map<String, String> map = new HashMap<>();
 map.put("java", "language");
