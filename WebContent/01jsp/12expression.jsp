@@ -19,7 +19,15 @@ map.put("javascript", "script");
 %>
 
 <%-- code 작성 --%>
-
+<ul>
+	<%
+	for (Map.Entry<String, String> entry : map.entrySet()) {
+	%>
+		<li><%= entry.getKey() %> : <%= entry.getValue() %> </li>
+	<%
+	}
+	%>
+</ul>
 </body>
 </html>
 
