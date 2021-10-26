@@ -20,6 +20,7 @@
 <hr>
 
 <p><%= request.getParameter("q") %></p>
+<p><%= request.getParameter("name") %></p>
 
 
 </body>
