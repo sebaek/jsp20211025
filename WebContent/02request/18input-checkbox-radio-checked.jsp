@@ -25,7 +25,20 @@
 
 <hr>
 <%-- java 코드로 movie 값들과 color 값 출력 --%>
+<p>좋아하는 영화</p>
+<ul>
+<%
+	String[] movies = request.getParameterValues("movie");
+	if (movies != null) {
+		for (String movie : movies) {
+			out.print("<li>" + movie + "</li>");
+		}
+	}
+%>
+</ul>
 
+<p>좋아하는 색</p>
+<%= request.getParameter("color") %>
 
 </body>
 </html>
