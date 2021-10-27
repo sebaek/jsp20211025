@@ -39,7 +39,7 @@
 				break;
 			}
 			
-			let resultStr = `${v1} ${opStr} ${v2} = ${res}`;
+			let resultStr = `\${v1} \${opStr} \${v2} = \${res}`;
 			
 			$("#result").text(resultStr);
 		});
