@@ -30,7 +30,7 @@ if (txt != null && !txt.isEmpty()) {
 <%
 for (int i = 0; i < list.size(); i++) {
 %>
-	<div><%= (i+1) + "번" %> : <%= list.get(i) %></div>
+	<div><%= (i+1) + "번" %> : <%= list.get(i).replace("<", "&lt;").replace(">", "&gt;") %></div>
 <%
 }
 %>
