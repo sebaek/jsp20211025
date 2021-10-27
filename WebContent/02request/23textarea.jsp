@@ -12,6 +12,10 @@
 <!-- form>textarea+input:s -->
 <form action="">
 	<textarea name="text1" id="" cols="30" rows="10"></textarea>
+	
+	<br>
+	
+	<input type="text" name="text2">
 	<input type="submit" value="전송">
 </form>
 
@@ -26,6 +30,8 @@ String txt = request.getParameter("text1");
 <hr>
 
 <textarea name="" id="" cols="30" rows="10" readonly><%= txt %></textarea>
+
+<div><%= request.getParameter("text2") %></div>
 
 </body>
 </html>
