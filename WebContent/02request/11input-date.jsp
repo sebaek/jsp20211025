@@ -23,10 +23,18 @@
 
 <%
 // int a = request.getParameter("param2"); //xxx
-String param2 = request.getParameter("param2"); 
-int a = Integer.parseInt(param2); // numberFormatException
+String param2 = request.getParameter("param2");
+out.print("param2:" + param2);
 
-out.print(a);
+try {
+	int a = Integer.parseInt(param2); // numberFormatException
+	
+	out.print("<br>");
+	out.print(a);
+} catch (NumberFormatException e) {
+	out.print("<p>수로 변환할 수 없는 형식 </p>");
+	e.printStackTrace();
+}
 %>
 </body>
 </html>
