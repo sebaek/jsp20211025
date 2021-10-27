@@ -22,5 +22,16 @@
 	<br>
 	<input type="submit" value="전송">
 </form>
+
+<hr>
+<%-- java 코드로 movie 값들과 color 값 출력 --%>
+
+
 </body>
 </html>
+
+
+
+
+
+
