@@ -10,7 +10,15 @@
 </head>
 <body>
 <!-- code 작성 -->
-
+<!-- form>(input:c)*5+input:s -->
+<form action="">
+	<input type="checkbox" name="movie" value="action" id="">액션
+	<input type="checkbox" name="movie" value="horror" id="">공포
+	<input type="checkbox" name="movie" value="family" id="">가족
+	<input type="checkbox" name="movie" value="kids" id="">어린이
+	<input type="checkbox" name="movie" value="romance" id="">로맨스
+	<input type="submit" value="전송">
+</form>
 
 <hr>
 <ul>
