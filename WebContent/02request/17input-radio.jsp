@@ -23,6 +23,14 @@
 
 <hr>
 <%-- 선택된 색이 출력되도록 java 코드 작성 --%>
+<%
+String color = request.getParameter("color");
+%>
+<p>좋아하는 색 : <%= color %></p>
+
+<div style="width:100px; height:100px;
+ border: 2px solid black; background-color: <%=color %>">
+</div>
 </body>
 </html>
 
