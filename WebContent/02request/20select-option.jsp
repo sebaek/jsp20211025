@@ -15,8 +15,13 @@
 	<select name="year" id="">
 		<%
 			for (int i = 2000; i <= 2021; i++) {
+				String selected = "";
+				
+				if (i == 2010) {
+					selected = "selected";
+				}
 		%>
-			<option value="<%= i %>"><%= i %></option>		
+			<option value="<%= i %>" <%=selected %>><%= i %></option>		
 		<%
 			}
 		%>
