@@ -14,7 +14,7 @@
 	<!-- select>(opt)*3 -->
 	<select name="color" id="">
 		<option value="red">빨강</option>
-		<option value="yellow">노랑</option>
+		<option value="yellow" selected>노랑</option>
 		<option value="blue">파랑</option>
 	</select>
 	
