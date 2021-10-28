@@ -5,7 +5,7 @@
 
 <hr>
 <div>
-<span>2021 github Inc,</span>
+<span>2021 gitlab Inc,</span>
 <span>Terms</span>
 <span>Privacy</span>
 <span>Security</span>

@@ -14,6 +14,6 @@
 <h1>첫번째 페이지 내용들..</h1>
 
 <%-- 02sub.jsp 내용이 include directive 사용하여 추가 --%>
-
+<%@ include file="/03module/02sub.jsp" %>
 </body>
 </html>
