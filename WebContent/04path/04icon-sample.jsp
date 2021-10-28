@@ -7,9 +7,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
 <link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
+
+<title>Insert title here</title>
 </head>
 <body>
 
