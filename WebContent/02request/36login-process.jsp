@@ -23,7 +23,8 @@ if (id != null && pw != null) {
 	} else {
 %>
 	<h1>아이디나 패스워드가 일치하지 않습니다.</h1>
-	<a href="/myjsp/02request/35login-form.jsp">로그인화면으로 돌아가기</a>
+	<!-- <a href="/myjsp/02request/35login-form.jsp">로그인화면으로 돌아가기</a> -->
+	<a href="<%= request.getContextPath() %>/02request/35login-form.jsp">로그인화면으로 돌아가기</a>
 <%
 	}
 }
