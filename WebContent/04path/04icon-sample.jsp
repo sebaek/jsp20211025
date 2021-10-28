@@ -14,6 +14,8 @@
 <body>
 
 <i class="fab fa-apple"></i>
+<i class="fas fa-heart"></i>
+<i class="far fa-heart"></i>
 
 </body>
 </html>
