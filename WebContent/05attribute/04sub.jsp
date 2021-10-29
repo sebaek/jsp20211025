@@ -13,6 +13,28 @@
 		만들기
 		
 		 --%>
-		
+		 
+		 <%
+		 	String[] items = (String[]) request.getAttribute("menuItems");
+		 	
+		 	for (String item : items) {
+		 %>
+		 
+		 		<li class="menu-item">
+		 			<a href=""><%= item %></a>
+		 		</li>
+		 
+		 <%
+		 	}
+		 %>
 	</ul>
 </div>
+
+
+
+
+
+
+
+
+
