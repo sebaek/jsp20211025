@@ -14,9 +14,40 @@
 <body>
 <h1>main contents</h1>
 
+<%
+Enumeration<String> iter = request.getParameterNames();
 
-<jsp:include page="/03module/06request-param-sub.jsp"></jsp:include>
+while (iter.hasMoreElements()) {
+%>
+	<p><%= iter.nextElement() %></p>
+	
+<%
+}
+%>
 
+<hr>
+<h2>sub start</h2>
+<jsp:include page="/03module/06request-param-sub.jsp">
+	<jsp:param value="seoul" name="city"/>
+</jsp:include>
+
+<hr>
+city:<%= request.getParameter("city") %>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
