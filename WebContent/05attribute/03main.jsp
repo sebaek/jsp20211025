@@ -17,7 +17,7 @@
 
 <%
 String[] arr = {"jin", "jk", "hope", "suga"};
-
+request.setAttribute("arr1", arr);
 %>
 
 <jsp:include page="03sub.jsp"></jsp:include>
