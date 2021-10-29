@@ -8,3 +8,5 @@
 city : <%= request.getParameter("city") %> <br>
 
 food : <%= request.getParameter("food") %> <br>
+
+group : <%= request.getParameter("group") %> <br>

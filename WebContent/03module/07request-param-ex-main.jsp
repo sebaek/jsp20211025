@@ -25,6 +25,8 @@ food : apple 이라고 출력되도록 jsp:include 요소의 content를 변경�
 
 <jsp:include page="07request-param-ex-sub.jsp">
 	<jsp:param value="apple" name="food"/>
+	<jsp:param value="bts" name="group"/>
+	<jsp:param value="butter" name="song" />
 </jsp:include>
 </body>
 </html>
