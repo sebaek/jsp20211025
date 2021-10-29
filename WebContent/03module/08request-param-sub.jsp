@@ -3,15 +3,20 @@
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
 
-<title>Insert title here</title>
-</head>
-<body>
+<div>
 
-</body>
-</html>
+<!-- ul.menu>li.menu-item*3>a -->
+<ul class="menu">
+	<li class="menu-item">
+		<a href=""><%= request.getParameter("menu1") %></a>
+	</li>
+	<li class="menu-item">
+		<a href=""><%= request.getParameter("menu2") %></a>
+	</li>
+	<li class="menu-item">
+		<a href=""><%= request.getParameter("menu3") %></a>
+	</li>
+</ul>
+
+</div>

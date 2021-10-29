@@ -13,17 +13,15 @@
 </head>
 <body>
 
-<%-- menu --%>
 <jsp:include page="08request-param-sub.jsp">
-	<jsp:param value="link1" name="menu1"/>
-	<jsp:param value="link2" name="menu2"/>
-	<jsp:param value="link3" name="menu3"/>
+	<jsp:param value="city1" name="menu1"/>
+	<jsp:param value="city2" name="menu2"/>
+	<jsp:param value="city3" name="menu3"/>
 </jsp:include>
 
 <div>
-	<h1>main contents</h1>
+<h1>main1 contents</h1>
 </div>
-
 
 </body>
 </html>
