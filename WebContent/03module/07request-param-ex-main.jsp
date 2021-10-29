@@ -23,7 +23,9 @@ sub.jsp에서
 food : apple 이라고 출력되도록 jsp:include 요소의 content를 변경해보세요
  --%>
 
-<jsp:include page="07request-param-ex-sub.jsp"></jsp:include>
+<jsp:include page="07request-param-ex-sub.jsp">
+	<jsp:param value="apple" name="food"/>
+</jsp:include>
 </body>
 </html>
 
