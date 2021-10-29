@@ -43,8 +43,9 @@
 		 --%>
 		 
 		 <%
-		 	String[] items = (String[]) request.getAttribute("menuItems");
-		 	
+		 	// String[] items = (String[]) request.getAttribute("menuItems");
+		 	List<String> items = (List<String>) request.getAttribute("menuItems");	
+		 
 		 	for (String item : items) {
 		 %>
 		 

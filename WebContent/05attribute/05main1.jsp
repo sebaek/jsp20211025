@@ -17,10 +17,16 @@
 
 
 <%
-String[] list = {"home", "about", "login"};
+// String[] list = {"home", "about", "login"};
+// ArrayList<String> list = new ArrayList<>();
+// list.add("home");
+// list.add("about");
+// list.add("login");
+List<String> list = Arrays.asList("home", "about", "login");
+
 request.setAttribute("menuItems", list);
 %>
-<jsp:include page="04sub.jsp"></jsp:include>
+<jsp:include page="05sub.jsp"></jsp:include>
 
 <h1>main1 contents</h1>
 
