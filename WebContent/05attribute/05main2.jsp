@@ -13,5 +13,17 @@
 </head>
 <body>
 
+<%-- 04sub.jsp 활용하여 메뉴 만들기 --%>
+
+
+<%
+String[] list = {"home", "about", "info", "logout"};
+request.setAttribute("menuItems", list);
+%>
+<jsp:include page="04sub.jsp"></jsp:include>
+
+<h1>main2 contents</h1>
+
+
 </body>
 </html>
