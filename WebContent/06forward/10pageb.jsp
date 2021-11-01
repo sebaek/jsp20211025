@@ -19,7 +19,15 @@ List<String> songList = (List<String>) request.getAttribute("song");
 %>
 
 <%-- songList의 아이템들을 출력 --%>
-
+<ul>
+<%
+	for (String song : songList) {
+%>
+		<li><%= song %></li>
+<%
+	}
+%>
+</ul>
 </body>
 </html>
 

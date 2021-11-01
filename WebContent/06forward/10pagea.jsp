@@ -20,6 +20,15 @@ String[] foodList = (String[]) request.getAttribute("food");
 %>
 
 <%-- foodList의 값들을 출력 --%>
+<ul>
+<%
+	for (String food : foodList) {
+%>
+		<li><%= food %></li>
+<%
+	}
+%>
+</ul>
 </body>
 </html>
 
