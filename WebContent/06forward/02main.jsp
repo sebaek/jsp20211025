@@ -5,3 +5,4 @@
 
 <%-- 02other.jsp forward --%>
 
+<jsp:forward page="02other.jsp" />
