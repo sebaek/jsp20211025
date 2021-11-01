@@ -13,12 +13,8 @@
 </head>
 <body>
 
-<h1>main contents</h1>
+<h1>02other.jsp</h1>
 
-<jsp:forward page="01other.jsp"></jsp:forward>
-
-
-<h1>main contents2222222222</h1>
 
 </body>
 </html>
