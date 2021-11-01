@@ -11,3 +11,18 @@
 	07view2vip.jsp로 포워딩
 	
 --%>
+
+<%
+String userid = request.getParameter("userid");
+
+if (userid.equals("iamnormal")) {
+%>
+	<jsp:forward page="07view1normal.jsp" />
+<%
+} else if (userid.equals("iamvip")) {
+	
+%>
+	<jsp:forward page="07view2vip.jsp" />
+<%
+}
+%>
