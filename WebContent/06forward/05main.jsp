@@ -3,5 +3,6 @@
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
-<%-- 04other.jsp forward --%>
-<jsp:forward page="04other.jsp" />
+<jsp:forward page="05other.jsp" >
+	<jsp:param value="korea" name="param1"/>
+</jsp:forward>
