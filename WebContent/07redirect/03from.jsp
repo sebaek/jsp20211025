@@ -4,3 +4,7 @@
 <% request.setCharacterEncoding("utf-8"); %>
 
 <%-- 03to.jsp 로 리디렉션 하는 코드 작성 --%>
+
+<%
+response.sendRedirect("03to.jsp");
+%>
