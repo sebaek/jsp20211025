@@ -13,11 +13,49 @@
 </head>
 <body>
 
+<%
+Set<String> set = (Set<String>) session.getAttribute("foods");
+
+if (set == null) {
+	set = new HashSet<>();
+	session.setAttribute("foods", set);
+}
+
+String food = request.getParameter("food");
+
+if (food != null) {
+	set.add(food);
+}
+%>
 
 <a href="04attr1.jsp">선택하기</a>
 
 <div>
 <h1>선택한 음식들</h1>
+
+<ul>
+<%
+	for (String item : set) {
+%>
+		<li><%= item %></li>
+<%
+	}
+%>
+
+</ul>
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
