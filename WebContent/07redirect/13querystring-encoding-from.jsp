@@ -6,9 +6,9 @@
 
 <%
 String parama = "a=java";
-String paramb = "b=hello world";
+String paramb = "b=hello+world";
 // String paramc = "c=자바";
-String paramc = "c=" + URLEncoder.encode("자바", "utf-8");
+String paramc = "c=" + URLEncoder.encode("자+바", "utf-8");
 String location = "13querystring-encoding-to.jsp";
 String loc = location + "?" + parama + "&" + paramb + "&" + paramc;
 response.sendRedirect(loc);
