@@ -12,26 +12,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%-- session 삭제 --%>
 <%
-String name = (String) session.getAttribute("username");
-
-if (name != null) {
+session.invalidate();
 %>
-	<h1><%= name %>님 반갑습니다.</h1>
-	<a href="06logout.jsp">로그아웃</a>
-<%
-} else {
-%>
-	<h1>손님 반갑습니다.</h1>
-<%
-}
-%>
-
+<a href="06login.jsp">로그인</a> <br>
+<a href="06main.jsp">메인</a> <br>
 </body>
 </html>
-
-
-
-
-
