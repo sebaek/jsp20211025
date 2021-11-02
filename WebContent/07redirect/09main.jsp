@@ -9,6 +9,13 @@
 
  --%>
 
+<%
+String userid = request.getParameter("userid");
+
+if (userid != null && userid.equals("iamuser")) {
+	
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,3 +28,20 @@
 	<h1>메인 컨텐츠</h1>
 </body>
 </html>
+
+<%
+} else {
+	response.sendRedirect("09login-form.jsp");
+}
+%>
+
+
+
+
+
+
+
+
+
+
+
