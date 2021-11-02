@@ -12,6 +12,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+session.invalidate();
+%>
 <a href="07invalidate1.jsp">다시 선택하기</a>
 </body>
 </html>
