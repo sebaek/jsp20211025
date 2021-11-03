@@ -12,6 +12,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%-- 07번 같은 예제 --%>
 </body>
 </html>
