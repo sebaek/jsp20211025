@@ -3,15 +3,4 @@
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="<%= request.getContextPath() %>/resource/css/icon/css/all.css">
-
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%-- 06signup-process.jsp 참고 --%>
