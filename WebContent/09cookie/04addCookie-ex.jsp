@@ -19,6 +19,10 @@
 // 쿠키값: my-new-cookie-value
 // 유효시간: 1시간
 
+Cookie cookie = new Cookie("my-new-cookie", "my-new-cookie-value");
+cookie.setMaxAge(60 * 60);
+
+response.addCookie(cookie);
 %>
 </body>
 </html>
