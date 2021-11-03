@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>회원 목록</h1>
+<a href="06signup-form.jsp">등록하기</a>
 
 <ul>
 <%
