@@ -29,6 +29,14 @@
 	}
 %>
 </ul>
+
+<hr>
+<h1>표현언어 (expression language - el)</h1>
+<ul>
+<li>${books[0].title } : ${books[0].price }원</li>
+<li>${books[1].title } : ${books[1].price }원</li>
+</ul>
+
 </body>
 </html>
 
