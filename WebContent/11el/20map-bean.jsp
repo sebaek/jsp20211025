@@ -23,8 +23,13 @@ Bean03 val2 = new Bean03();
 val2.setName("trump");
 val2.setAge(999);
 
+Bean03 val3 = new Bean03();
+val3.setName("john");
+val3.setAge(22);
+
 map.put("person1", val1);
 map.put("person2", val2);
+map.put("new person", val3);
 
 pageContext.setAttribute("persons", map);
 %>
@@ -32,6 +37,13 @@ pageContext.setAttribute("persons", map);
 <p>1번 이름 : ${persons.person1.name }</p>
 <p>1번 나이 : ${persons.person1.age }</p>
 
+<p>2번 이름 : ${persons.person2.name }</p>
+<p>2번 나이 : ${persons.person2.age }</p>
+
+<p>new person 이름 : ${persons["new person"].name }</p>
+<p>new person 이름 : ${persons["new person"]["name"] }</p>
+<p>new person 나이 : ${persons["new person"].age }</p>
+<p>new person 나이 : ${persons["new person"]["age"] }</p>
 
 </body>
 </html>
