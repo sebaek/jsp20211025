@@ -35,8 +35,11 @@ trump
 33
 ny
 true
-
  --%>
+<p>${data1.data1.info.name }</p>
+<p>${data1.data1.info.age }</p>
+<p>${data1.data1.city }</p>
+<p>${data1.data1.info.kid }</p>
 
 
 </body>
