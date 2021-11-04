@@ -17,5 +17,32 @@
 
 <%-- Bean03 --%>
 
+
+<%-- 
+Bean04를 java bean 규칙을 따라서 작성
+
+아래 3개의 속성(property)을 갖도록
+String nickName 
+int age
+boolean vip
+
+
+ --%>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
