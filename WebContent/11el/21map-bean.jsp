@@ -26,12 +26,29 @@ obj.setVip(true);
 map.put("key1", obj);
 
 pageContext.setAttribute("data", map);
+pageContext.setAttribute("key1", "key1");
+pageContext.setAttribute("nickName", "nickName");
+pageContext.setAttribute("age", "age");
+pageContext.setAttribute("vip", "vip");
 %>
 
 
 <p>${data.key1.nickName }</p>
 <p>${data.key1.age }</p>
 <p>${data.key1.vip }</p>
+
+<hr>
+
+<p>${data["key1"]["nickName"] }</p>
+<p>${data["key1"]["age"] }</p>
+<p>${data["key1"]["vip"] }</p>
+
+<hr>
+<p>${data[key1][nickName] }</p>
+<p>${data[key1][age] }</p>
+<p>${data[key1][vip] }</p>
+
+
 </body>
 </html>
 
