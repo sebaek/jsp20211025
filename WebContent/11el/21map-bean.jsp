@@ -30,6 +30,7 @@ pageContext.setAttribute("key1", "key1");
 pageContext.setAttribute("nickName", "nickName");
 pageContext.setAttribute("age", "age");
 pageContext.setAttribute("vip", "vip");
+pageContext.setAttribute("key2", "seoul");
 %>
 
 
@@ -48,7 +49,8 @@ pageContext.setAttribute("vip", "vip");
 <p>${data[key1][age] }</p>
 <p>${data[key1][vip] }</p>
 
-
+<p>${[nickName] }</p>
+<p>${[key2] }</p>
 </body>
 </html>
 
