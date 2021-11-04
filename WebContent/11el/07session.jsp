@@ -22,6 +22,15 @@ session.setAttribute("sesAttr4", true);
 <p>java code : <%= session.getAttribute("sesAttr1") %></p>
 <p>el : ${sesAttr1 }</p>
 
+<p>java code : <%= session.getAttribute("sesAttr2") %></p>
+<p>el : ${sesAttr2 }</p>
+
+<p>java code : <%= session.getAttribute("sesAttr3") %></p>
+<p>el : ${sesAttr3 }</p>
+
+<p>java code : <%= session.getAttribute("sesAttr4") %></p>
+<p>el : ${sesAttr4 }</p>
+
 </body>
 </html>
 
