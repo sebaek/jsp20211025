@@ -20,8 +20,8 @@ val1.setName("donald");
 val1.setAge(3000);
 
 Bean03 val2 = new Bean03();
-val1.setName("trump");
-val1.setAge(999);
+val2.setName("trump");
+val2.setAge(999);
 
 map.put("person1", val1);
 map.put("person2", val2);
