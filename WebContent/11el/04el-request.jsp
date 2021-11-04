@@ -12,6 +12,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+request.setAttribute("reqAttr1", "reqVal1");
+request.setAttribute("reqAttr2", 900000000);
+request.setAttribute("reqAttr3", false);
+%>
+<p>java code : <%= request.getAttribute("reqAttr1") %></p>
+<p>el : ${reqAttr1 }</p>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
