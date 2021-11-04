@@ -19,7 +19,12 @@ request.setAttribute("reqAttr3", false);
 %>
 <p>java code : <%= request.getAttribute("reqAttr1") %></p>
 <p>el : ${reqAttr1 }</p>
-
+<p>java code : <%= request.getAttribute("reqAttr2") %></p>
+<p>el : ${reqAttr2 }</p>
+<p>java code : <%= request.getAttribute("reqAttr3") %></p>
+<p>el : ${reqAttr3 }</p>
+<p>java code : <%= request.getAttribute("reqAttr4") %></p>
+<p>el : ${reqAttr4 }</p>
 </body>
 </html>
 
