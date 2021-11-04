@@ -12,15 +12,26 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+application.setAttribute("appAttr1", "appVal1");
+application.setAttribute("appAttr2", 3000);
+application.setAttribute("appAttr3", false);
+application.setAttribute("appAttr4", 3.14);
+%>
 
-<h1>09to.jsp</h1>
+<p>java code: <%= application.getAttribute("appAttr1") %></p>
+<p>el : ${appAttr1 }</p>
 
-<%-- session attribute
-city,pop,vip,pi 가 출력되도록 el 사용
- --%>
-<p>city : ${city }</p>
-<p>pop : ${pop }</p>
-<p>vip : ${vip }</p>
-<p>pi : ${pi }</p>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
