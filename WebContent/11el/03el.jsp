@@ -31,6 +31,10 @@ pageContext.setAttribute("pageAttr3", true);
 <p>el : ${pageAttr2 }</p>
 <%-- java code (expression) 사용해서 pageAttr3의 값 출력 코드 작성 --%>
 <%-- el사용해서 pageAttr3의 값 출력 코드 작성 --%>
+<p>java code : <%= pageContext.getAttribute("pageAttr3") %></p>
+<p>el : ${pageAttr3 }</p>
+<p>java code : <%= pageContext.getAttribute("pageAttr4") %></p>
+<p>el : ${pageAttr4 }</p>
 
 </body>
 </html>
