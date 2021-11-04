@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -13,5 +12,12 @@
 </head>
 <body>
 <h1>19to.jsp</h1>
+
+<p>name : ${data1.name }</p>
+<p>city : ${data1.city }</p>
+<p>1000 : ${data1["1000"] }</p>
+<p>this day : ${data1["this day"] }</p>
+
+
 </body>
 </html>
