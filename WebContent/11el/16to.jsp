@@ -13,6 +13,8 @@
 </head>
 <body>
 <h1>16to.jsp</h1>
-
+<p>nickName : ${bean2.nickName }</p>
+<p>age : ${bean2.age }</p>
+<p>vip : ${bean2.vip }</p>
 </body>
 </html>
