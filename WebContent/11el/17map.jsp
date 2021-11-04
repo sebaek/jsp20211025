@@ -19,6 +19,7 @@ Map<String, String> map = new HashMap<>();
 map.put("lang", "java");
 map.put("pre", "html");
 map.put("pattern", "mvc");
+// 2개의 key,value 쌍(entry) 넣고
 
 pageContext.setAttribute("bean1", map);
 %>
@@ -29,6 +30,7 @@ pageContext.setAttribute("bean1", map);
 <p>lang : ${bean1.lang }</p>
 <p>pre : ${bean1.pre }</p>
 <p>pattern : ${bean1.pattern }</p>
+<%-- 위에 추가한 value를 출력 -el 사용 --%>
 </body>
 </html>
 
