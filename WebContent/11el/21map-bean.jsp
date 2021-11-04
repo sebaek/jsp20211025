@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
+<%@ page import="sample03javabean.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -16,6 +17,15 @@
 // 코드 작성
 // page 영역 attribute로 map 객체를 data라는 이름으로 넣고
 // map에 key, value 쌍을  (key1(String), obj(Bean04))로 추가
+
+Map<String, Bean04> map = new HashMap();
+Bean04 obj = new Bean04();
+obj.setNickName("korea");
+obj.setAge(30000);
+obj.setVip(true);
+map.put("key1", obj);
+
+pageContext.setAttribute("data", map);
 %>
 
 
