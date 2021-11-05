@@ -27,8 +27,9 @@ pageContext.setAttribute("list1", list);
 <p>${arr1[0] }</p>
 <p>${arr1[1] }</p>
 <p>${list1[0] }</p>
-<p>${list1[1] }</p>
-<p>${list1[2] }</p>
+<p>${list1["1"] }</p>
+<p>${list1["2"] }</p>
+<%-- <p>${list1["one"] }</p> --%>
 </body>
 </html>
 
