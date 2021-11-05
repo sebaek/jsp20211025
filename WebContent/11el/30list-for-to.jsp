@@ -13,5 +13,23 @@
 </head>
 <body>
 
+
+<%
+List<String> data = (List<String>) session.getAttribute("data");
+
+for (int i = 0; i < data.size() ; i++) {
+%>
+	<p>${i } : ${data[i] }</p>
+<%
+}
+%>
+
+
 </body>
 </html>
+
+
+
+
+
+
