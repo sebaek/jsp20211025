@@ -18,6 +18,7 @@
 List<String> data = (List<String>) session.getAttribute("data");
 
 for (int i = 0; i < data.size() ; i++) {
+	pageContext.setAttribute("i", i);
 %>
 	<p>${i } : ${data[i] }</p>
 <%
