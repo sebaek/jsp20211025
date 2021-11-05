@@ -12,6 +12,27 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+pageContext.setAttribute("attr1", "page value1");
+request.setAttribute("attr1", "request value1");
+
+%>
+
+<p>${attr1 }</p>
+<p>${requestScope.attr1 }</p>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
