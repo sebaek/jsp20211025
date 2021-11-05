@@ -12,6 +12,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+String[] arr = {"banana", "apple"};
+List<String> list = new ArrayList<>();
+list.add("java");
+list.add("react");
+list.add("vue");
+
+pageContext.setAttribute("arr1", arr);
+pageContext.setAttribute("list1", list);
+%>
+
 
 <p>${arr1[0] }</p>
 <p>${arr1[1] }</p>
@@ -20,3 +31,14 @@
 <p>${list1[2] }</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
