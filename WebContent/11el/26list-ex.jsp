@@ -26,6 +26,13 @@ pageContext.setAttribute("data2", arr1);
 
 <%-- v, suga, rm, jk, jin, jimin, hope --%>
 
+<p>${data1[0] }</p>
+<p>${data1[1] }</p>
+<p>${data1[2] }</p>
+<p>${data2[0] }</p>
+<p>${data2[1] }</p>
+<p>${data2[2] }</p>
+<p>${data2[3] }</p>
 
 </body>
 </html>
