@@ -28,7 +28,7 @@ map.put("data", arr);
 pageContext.setAttribute("data", map);
 %>
 
-<%-- captain --%>
+<%-- el사용해서 captain 출력 --%>
 </body>
 </html>
 
