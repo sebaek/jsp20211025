@@ -30,6 +30,15 @@ pageContext.setAttribute("data", list);
 2 : mvc
 3 : controller
  --%>
+ 
+<%
+for (int i = 0; i < list.size(); i++) {
+	pageContext.setAttribute("i", i);
+%>
+	<p>${i} : ${data[i] }</p>
+<%
+}
+%>
 
 </body>
 </html>
