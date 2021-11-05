@@ -14,10 +14,10 @@
 <body>
 <%-- http://localhost:8080/jsp10/11el/47arithmetic-ex.jsp?a=5&b=3 --%>
 
-<p>a + b: </p>
-<p>a - b: </p>
-<p>a * b: </p>
-<p>a / b: </p>
-<p>a % b: </p>
+<p>a + b: ${param.a + param.b } </p>
+<p>a - b: ${param.a - param.b }</p>
+<p>a * b: ${param.a * param.b } </p>
+<p>a / b: ${param.a / param.b } </p>
+<p>a % b: ${param.a % param.b }</p>
 </body>
 </html>
