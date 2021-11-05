@@ -24,6 +24,17 @@ session.setAttribute("new data", "new session data");
 application.setAttribute("new data", "new app data");
 %>
 
+<p>\${data} : ${data }</p>
+<p>\${pageScope.data } : ${pageScope.data }</p>
+<p>\${requestScope.data } : ${requestScope.data }</p>
+<p>\${sessionScope.data } : ${sessionScope.data }</p>
+<p>\${applicationScope.data } : ${applicationScope.data }</p>
+
+<hr>
+<p>\${pageScope["new data"] } : ${pageScope["new data"] }</p>
+<p>\${requestScope["new data"] } : ${requestScope["new data"] }</p>
+<p>\${sessionScope["new data"] } : ${sessionScope["new data"] }</p>
+<p>\${applicationScope["new data"] } : ${applicationScope["new data"] }</p>
 
 </body>
 </html>
