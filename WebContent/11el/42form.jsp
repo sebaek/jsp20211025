@@ -15,9 +15,22 @@
 <form action="42view.jsp" method="post">
 <%-- input:text name 파라미터 --%>
 <%-- input:checkbox food 파라미터 --%>
-
+<input type="text" name="name" id="" placeholder="이름"> <br>
+<input type="checkbox" name="food" value="pizza" id="">pizza
+<br>
+<input type="checkbox" name="food" value="cake" id="">cake
+<br>
+<input type="checkbox" name="food" value="milk" id="">milk
+<br>
 
 <input type="submit" value="전송">
 </form>
 </body>
 </html>
+
+
+
+
+
+
+
