@@ -29,6 +29,7 @@ pageContext.setAttribute("data", map);
 %>
 
 <%-- el사용해서 captain 출력 --%>
+<p>${data.data[0].info.name }</p>
 </body>
 </html>
 
