@@ -22,8 +22,8 @@ pageContext.setAttribute("city", "seoul");
 let name = "france";
 let city = "paris";
 
-let info1 = ``; // 코드 작성
-let info2 = ``; // 코드 작성
+let info1 = `name : ${name}, city: ${city}`; // 코드 작성
+let info2 = `name : \${name}, city: \${city}`; // 코드 작성
 
 console.log(info1); // name : korea, city : seoul
 console.log(info2); // name : france, city : paris
