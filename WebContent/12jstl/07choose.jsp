@@ -13,35 +13,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <h1>choose</h1>
 
-<%-- 
-age 파라미터의 값이 20이상이면
-투표가능합니다.
-
-그렇지 않으면
-투표 불가능합니다.
-
- --%>
-
 <c:choose>
-	<c:when test="${param.age >= 20 }">
-		<p>투표가능합니다.</p>
+	<c:when test="${param.age <= 10 }">
+		<p>어린이용</p>
 	</c:when>
-
+	
+	<c:when test="${param.age <= 20 }">
+		<p>청소년용</p>
+	</c:when>
+	
+	<c:when test="${param.age > 20 }">
+		<p>성인용</p>
+	</c:when>
+	
 	<c:otherwise>
-		<p>투표 불가능합니다.</p>
+		<p>입력되지 않았습니다.</p>
 	</c:otherwise>
 </c:choose>
+
 </body>
 </html>
-
-
-
-
-
-
 
 
 
