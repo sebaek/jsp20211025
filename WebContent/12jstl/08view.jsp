@@ -35,7 +35,45 @@
 "나이가 입력되지 않았습니다."
 
  --%>
+
 <a href="08form.jsp">다시 입력</a>
+
+
+<c:choose>
+	<c:when test="${empty param.name and empty param.age }">
+		<p>정보가 입력되지 않았습니다.</p>
+	</c:when>
+
+	<c:otherwise>
+		<p>
+			<c:choose>
+				<c:when test="${empty param.name }">
+					손님
+				</c:when>
+				<c:otherwise>
+					${param.name }님
+				</c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+				<c:when test="${param.age <= 10 }">
+					어린이용 추천
+				</c:when>
+				<c:when test="${param.age <= 20 }">
+					청소년용 추천
+				</c:when>
+				<c:when test="${param.age > 20 }">
+					성인용 추천
+				</c:when>
+				<c:otherwise>
+					나이가 입력되지 않았습니다.
+				</c:otherwise>
+			</c:choose>
+		</p>
+		
+	</c:otherwise>
+</c:choose>
+
 </body>
 </html>
 
