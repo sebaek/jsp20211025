@@ -14,9 +14,29 @@
 </head>
 <body>
 <h1>name 파라미터가 있으면 </h1>
-<p>${param.name }님 반갑습니다.</p>
+<c:if test="${not empty param.name }"> <%-- ! empty param.name --%>
+	<p>${param.name }님 반갑습니다.</p>
+</c:if>
 
 <h1>name 파라미터가 없으면</h1>
-<p>손님 반갑습니다.</p>
+<c:if test="${empty param.name }">
+	<p>손님 반갑습니다.</p>
+</c:if>
+
+<hr>
+<p>
+${ empty param.name ? '손' : param.name }님 반갑습니다.
+</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
