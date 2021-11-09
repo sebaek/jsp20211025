@@ -21,5 +21,21 @@
 ...
 2 X 9 = 18
  --%>
+ 
+<c:forEach begin="1" end="9" var="i">
+	<p>2 X ${i } = ${ 2 * i }</p>
+</c:forEach>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
