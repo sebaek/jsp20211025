@@ -22,6 +22,7 @@
 	</c:forEach>
 	<hr>
 </c:forEach>
+
 </body>
 </html>
 
