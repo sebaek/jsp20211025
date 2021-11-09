@@ -26,6 +26,12 @@ pageContext.setAttribute("array", new String[] {"mvc", "itzy", "asap", "mafia", 
 </ol>
 
 --%>
+
+<ol>
+	<c:forEach items="${array }" var="item" begin="1" end="3">
+		<li>${item }</li>
+	</c:forEach>
+</ol>
 </body>
 </html>
 
