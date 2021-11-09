@@ -86,6 +86,24 @@ request.setAttribute("books", list);
 
 <h3>forEach</h3>
 
+<table>
+	<tr>
+		<th>#</th>
+		<th>제목</th>
+		<th>저자</th>
+		<th>가격</th>
+	</tr>
+	
+	<c:forEach items="${books }" var="book" varStatus="status">
+		<tr>
+			<td>${status.count }</td>
+			<td>${book.title }</td>
+			<td>${book.writer }</td>
+			<td>${book.price }</td>
+		</tr>
+	</c:forEach>
+</table>
+
 </body>
 </html>
 
