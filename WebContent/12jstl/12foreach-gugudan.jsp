@@ -22,5 +22,26 @@ dan 파라미터를 사용해서
 empty dan 이면 '단을 입력해주세요'
  --%>
 
+
+<c:if test="${empty param.dan }" var="emptyDan">
+	<p>단을 입력해주세요.</p>
+</c:if>
+
+<c:if test="${not emptyDan }" >
+	<c:forEach begin="1" end="9" var="i">
+		${param.dan } X ${i } = ${param.dan * i } <br>
+	</c:forEach>
+</c:if>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
