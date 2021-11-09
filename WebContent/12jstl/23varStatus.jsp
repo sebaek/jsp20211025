@@ -24,6 +24,19 @@ pageContext.setAttribute("data", new String[] {"water", "jeju", "seoul", "paris"
 	<li>2 : paris</li>
 </ul>
  --%>
+<ul>
+	<c:forEach items="${data }" var="item" varStatus="status" begin="2" end="3">
+		<li>${status.count } : ${item }</li>
+	</c:forEach>
+</ul>
+
+<hr>
+<ul>
+	<c:forEach items="${data }" var="item" varStatus="status" begin="2" end="3">
+		<li>${status.count } : ${data[status.index] }</li>
+	</c:forEach>
+</ul>
+
 </body>
 </html>
 
