@@ -27,6 +27,13 @@ pageContext.setAttribute("list", new String[] {"apple", "melon", "coffee", "milk
 </ul>
 
  --%>
+<ul>
+	<c:forEach items="${list }" var="food">
+		<li>${food }</li>
+	</c:forEach>
+</ul>
+ 
+ 
 </body>
 </html>
 
