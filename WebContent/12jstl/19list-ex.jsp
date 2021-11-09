@@ -46,7 +46,11 @@ pageContext.setAttribute("country", datas);
 	<li>uk</li>
 </ul>
  --%>
-
+<ul>
+	<c:forEach items="${country }" var="item" begin="1" end="3">
+		<li>${item }</li>
+	</c:forEach>
+</ul>
 
 </body>
 </html>
