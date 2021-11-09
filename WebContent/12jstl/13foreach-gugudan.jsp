@@ -13,6 +13,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>구구단 1~9단 (foreach)</h1>
+<h1>구구단 2~9단 (foreach)</h1>
+
+<c:forEach begin="2" end="9" var="i">
+	<h3>${i } 단</h3>
+	<c:forEach begin="1" end="9" var="j">
+		${i } X ${j } = ${i * j } <br>
+	</c:forEach>
+	<hr>
+</c:forEach>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
