@@ -30,6 +30,12 @@ pageContext.setAttribute("datas", map);
 </ul>
 --%>
 
+<ul>
+	<c:forEach items="${datas }" var="item">
+		<li>${item.key }</li>
+	</c:forEach>
+</ul>
+
 <%--
 <ul>
 	<li>asap</li>
@@ -37,7 +43,11 @@ pageContext.setAttribute("datas", map);
 	<li>seoul</li>
 </ul>
 --%>
-
+<ul>
+	<c:forEach items="${datas }" var="data">
+		<li>${data.value }</li>
+	</c:forEach>
+</ul>
 </body>
 </html>
 
