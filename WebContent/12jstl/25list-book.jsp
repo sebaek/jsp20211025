@@ -39,6 +39,7 @@ table, th, td {
 			<th>제목</th>
 			<th>저자</th>
 			<th>가격</th>
+			<th>출판사</th>
 		</tr>
 		
 		<c:forEach items="${books }" var="book" varStatus="status">
@@ -47,6 +48,7 @@ table, th, td {
 				<td>${book.title }</td>
 				<td>${book.writer }</td>
 				<td>${book.price }</td>
+				<td>${book.publisher }</td>
 			</tr>
 		</c:forEach>
 	</table>

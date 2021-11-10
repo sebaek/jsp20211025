@@ -4,12 +4,28 @@ public class Bean06 {
 	private String title;
 	private String writer;
 	private int price;
+	private String publisher;
 
 	public Bean06(String title, String writer, int price) {
 		super();
 		this.title = title;
 		this.writer = writer;
 		this.price = price;
+	}
+	
+	public Bean06(String title, String writer, int price, String publisher) {
+		this.title = title;
+		this.writer = writer;
+		this.price = price;
+		this.publisher = publisher;
+	}
+	
+	public String getPublisher() {
+		return publisher;
+	}
+	
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
 	}
 
 	public String getTitle() {
