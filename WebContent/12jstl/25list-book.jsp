@@ -46,11 +46,11 @@ table, th, td {
 		<c:forEach items="${books }" var="book" varStatus="status">
 			<tr>
 				<td>${status.count }</td>
-				<td>${book.title }</td>
-				<td>${book.writer }</td>
-				<td>${book.price }</td>
-				<td>${book.publisher }</td>
-				<td>${book.stock }</td>
+				<td><c:out value="${book.title }" /></td>
+				<td><c:out value="${book.writer }" /></td>
+				<td><c:out value="${book.price }" /></td>
+				<td><c:out value="${book.publisher }" /></td>
+				<td><c:out value="${book.stock }" /></td>
 			</tr>
 		</c:forEach>
 	</table>
