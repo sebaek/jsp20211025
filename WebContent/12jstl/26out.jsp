@@ -30,9 +30,8 @@ pageContext.setAttribute("attr1", "javascript");
 <%
 pageContext.setAttribute("attr3", "<script>alert('핵!!!');</script>");
 %>
-<%--
+
 ${attr3 } <br>
- --%>
 <c:out value="${attr3 }" />
 
 </body>
