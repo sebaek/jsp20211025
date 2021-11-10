@@ -45,7 +45,15 @@
 					<c:url value="25delete.jsp" var="deleteUrl">
 						<c:param name="index" value="${status.index }" />
 					</c:url>
-					<td><a class="btn btn-danger" href="${deleteUrl }"><i class="fas fa-trash-alt"></i></a></td>
+					<c:url value="25modify.jsp" var="modifyUrl">
+						<c:param name="index" value="${status.index }" />
+					</c:url>
+					<td>
+						<a class="btn btn-danger" href="${deleteUrl }"><i class="fas fa-trash-alt"></i></a>
+						<a href="${modifyUrl }" class="btn btn-secondary">
+							<i class="fas fa-edit"></i>
+						</a>	
+					</td>
 					<td>${status.count }</td>
 					<td><c:out value="${book.title }" /></td>
 					<td><c:out value="${book.writer }" /></td>
