@@ -17,7 +17,7 @@
 
 <hr>
 
-<c:url value="25process.jsp" var="addSpringBookUrl">
+<c:url value="25process.jsp" var="addSpringBookUrl" scope="page">
 	<c:param name="title" value="spring" />
 	<c:param name="writer" value="son" />
 	<c:param name="price" value="10000" />
