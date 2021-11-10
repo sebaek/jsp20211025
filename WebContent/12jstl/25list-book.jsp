@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ table, th, td {
 <title>Insert title here</title>
 </head>
 <body>
-<h1>책 목록</h1>
+<h1>책 목록 (${fn:length(books) } 권)</h1>
 
 <a href="25book-form.jsp">책 등록하기</a>
 
