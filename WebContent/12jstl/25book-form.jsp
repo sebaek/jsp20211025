@@ -20,9 +20,11 @@
 	<br>
 	<input type="text" name="writer" placeholder="저자">
 	<br>
-	<input type="number" name="price" placeholder="가격" value="0">
+	<input type="number" name="price" placeholder="가격" value="0"> 원
 	<br>
 	<input type="text" name="publisher" placeholder="출판사" >
+	<br>
+	<input type="number" name="stock" value="1"> 재고
 	<br>
 	<input type="submit" value="등록">
 </form>
