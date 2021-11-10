@@ -36,6 +36,7 @@ table, th, td {
 <c:if test="${not empty books }">
 	<table>
 		<tr>
+		    <th></th>
 			<th>#</th>
 			<th>제목</th>
 			<th>저자</th>
@@ -46,6 +47,10 @@ table, th, td {
 		
 		<c:forEach items="${books }" var="book" varStatus="status">
 			<tr>
+				<c:url value="25delete.jsp" var="deleteUrl">
+					<c:param name="index" value="${status.index }" />
+				</c:url>
+				<td><a href="${deleteUrl }"><i class="fas fa-trash-alt"></i></a></td>
 				<td>${status.count }</td>
 				<td><c:out value="${book.title }" /></td>
 				<td><c:out value="${book.writer }" /></td>
