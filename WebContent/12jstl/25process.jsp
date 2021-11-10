@@ -12,8 +12,10 @@ String writer = request.getParameter("writer");
 String priceStr = request.getParameter("price");
 String publisher = request.getParameter("publisher");
 int price = Integer.parseInt(priceStr);
+String stockStr = request.getParameter("stock");
+int stock = Integer.parseInt(stockStr);
 
-Bean06 book = new Bean06(title, writer, price, publisher);
+Bean06 book = new Bean06(title, writer, price, publisher, stock);
 
 // 2. application영역에 저장 (db 저장)
 List<Bean06> list = (List<Bean06>) application.getAttribute("books");
