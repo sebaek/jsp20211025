@@ -3,3 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ attribute name="color" %>
 <%@ attribute name="align" %>
+
+<div style="color: ${color}; text-align: ${align};">
+	<jsp:doBody></jsp:doBody>
+</div>
