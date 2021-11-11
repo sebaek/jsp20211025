@@ -21,9 +21,16 @@
 
 <my:t11gugudan dan="3"></my:t11gugudan> <%-- 구구단 3단 출력 --%>
 
-<%--
-<my:t11gugudan dan="three"></my:t11gugudan> 
- --%>
+
+<c:catch var="e">
+	<my:t11gugudan dan="three"></my:t11gugudan> 
+</c:catch>
+
+<c:if test="${not empty e }">
+	<div>
+		${e.message }
+	</div>
+</c:if>
 
 <%-- exception 발생 --%>
 
