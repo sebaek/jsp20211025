@@ -3,6 +3,7 @@
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags/13tag" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>책 목록 (${fn:length(books) } 권) /w TAG</h1>
+<h1>책 목록 (${fn:length(books) } 권) w/ TAG</h1>
 
 <a href="25book-form.jsp">책 등록하기</a>
 
