@@ -50,6 +50,14 @@
 			<!-- (h1>lorem3^p>lorem)*10 -->
 			<h1>Lorem ipsum dolor.</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam veritatis laborum iure rerum molestias officia. Voluptate quo itaque officiis sapiente quisquam esse reprehenderit dolorum provident beatae cum aliquid nobis eaque.</p>
+			
+			<!-- .row>.col*3>lorem -->
+			<div class="row">
+				<div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maiores blanditiis quibusdam eaque cupiditate nisi veritatis! Consectetur reiciendis nulla enim odit non rem tempore laborum ratione omnis harum voluptatem quam.</div>
+				<div class="col">Recusandae impedit pariatur iusto ab ipsa reprehenderit omnis quibusdam unde facere hic distinctio doloribus dicta. Repellendus cumque ipsum iusto doloremque laboriosam ab numquam excepturi beatae animi quos tempora aliquid quo?</div>
+				<div class="col">Eligendi ducimus culpa quisquam tempora error commodi et a totam quis quaerat pariatur inventore incidunt animi exercitationem sequi fuga ipsum est placeat nesciunt nemo dignissimos. Excepturi laboriosam nesciunt magni iusto!</div>
+			</div>
+			
 			<h1>Sequi corporis aspernatur.</h1>
 			<p>Et cum corporis magni id laboriosam nisi consectetur repellat tempore totam dolorum quisquam officia sapiente autem rem beatae natus eum distinctio harum incidunt quam! Itaque inventore eaque cum possimus dolore.</p>
 			<h1>Nostrum neque excepturi!</h1>
