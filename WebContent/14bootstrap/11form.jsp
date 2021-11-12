@@ -32,27 +32,26 @@
 			<div class="col-12">
 				<form action="../12jstl/25process.jsp" method="post">
 					<div class="form-group">
-						<label for="titleInput1">책 제목</label> 
-						<input
-							type="text" name="title" class="form-control" id="titleInput1"> 
-						<small id="titleHelp"
+						<label for="titleInput1">책 제목</label> <input type="text"
+							name="title" class="form-control" id="titleInput1"
+							placeholder="<br>"> <small id="titleHelp"
 							class="form-text text-muted">책 제목을 입력해주세요.</small>
 					</div>
 					<div class="form-group">
-						<label for="writerInput1">작성자</label> <input
-							type="text" name="writer" class="form-control" id="writerInput1">
+						<label for="writerInput1">작성자</label> <input type="text"
+							name="writer" class="form-control" id="writerInput1">
 					</div>
 					<div class="form-group">
-						<label for="priceInput1">가격</label> <input
-							type="number" name="price" class="form-control" id="priceInput1">
+						<label for="priceInput1">가격</label> <input type="number"
+							name="price" class="form-control" id="priceInput1">
 					</div>
 					<div class="form-group">
-						<label for="publisherInput1">출판사</label> <input
-							type="text" name="publisher" class="form-control" id="publisherInput1">
+						<label for="publisherInput1">출판사</label> <input type="text"
+							name="publisher" class="form-control" id="publisherInput1">
 					</div>
 					<div class="form-group">
-						<label for="stockInput1">재고</label> <input
-							type="number" name="stock" class="form-control" id="stockInput1">
+						<label for="stockInput1">재고</label> <input type="number"
+							name="stock" class="form-control" id="stockInput1">
 					</div>
 					<button type="submit" class="btn btn-primary">등록</button>
 				</form>
