@@ -27,7 +27,7 @@
 				<form action="../12jstl/25process.jsp" method="post">
 					<div class="form-group">
 						<label for="titleInput1">책 제목</label>
-						<input type="text" name="title" class="form-control" id="titleInput1" placeholder="<br>">
+						<input type="text" name="title" class="form-control" id="titleInput1">
 						<small id="titleHelp" class="form-text text-muted">책 제목을 입력해주세요.</small>
 					</div>
 					<div class="form-group">
