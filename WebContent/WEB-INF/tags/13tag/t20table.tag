@@ -26,7 +26,7 @@
 				</c:url>
 				<td>
 					<%-- <a class="btn btn-danger" href="${deleteUrl }"><i class="fas fa-trash-alt"></i></a> --%>
-					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+					<button type="button" class="btn btn-danger delete-modal-button" data-href="${deleteUrl }" data-toggle="modal" data-target="#exampleModal">
 						<i class="fas fa-trash-alt"></i>
 					</button>
 
