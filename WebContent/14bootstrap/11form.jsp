@@ -29,25 +29,32 @@
 	<!-- .container>.row.>.col-5 -->
 	<div class="container">
 		<div class="row ">
-			<div class="col-5">
-				<form>
+			<div class="col-12">
+				<form action="../12jstl/25process.jsp" method="post">
 					<div class="form-group">
-						<label for="exampleInputEmail1">Email address</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp"> <small id="emailHelp"
-							class="form-text text-muted">We'll never share your email
-							with anyone else.</small>
+						<label for="titleInput1">책 제목</label> 
+						<input
+							type="text" name="title" class="form-control" id="titleInput1"> 
+						<small id="titleHelp"
+							class="form-text text-muted">책 제목을 입력해주세요.</small>
 					</div>
 					<div class="form-group">
-						<label for="exampleInputPassword1">Password</label> <input
-							type="password" class="form-control" id="exampleInputPassword1">
+						<label for="writerInput1">작성자</label> <input
+							type="text" name="writer" class="form-control" id="writerInput1">
 					</div>
-					<div class="form-group form-check">
-						<input type="checkbox" class="form-check-input" id="exampleCheck1">
-						<label class="form-check-label" for="exampleCheck1">Check
-							me out</label>
+					<div class="form-group">
+						<label for="priceInput1">가격</label> <input
+							type="number" name="price" class="form-control" id="priceInput1">
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<div class="form-group">
+						<label for="publisherInput1">출판사</label> <input
+							type="text" name="publisher" class="form-control" id="publisherInput1">
+					</div>
+					<div class="form-group">
+						<label for="stockInput1">재고</label> <input
+							type="number" name="stock" class="form-control" id="stockInput1">
+					</div>
+					<button type="submit" class="btn btn-primary">등록</button>
 				</form>
 
 			</div>
