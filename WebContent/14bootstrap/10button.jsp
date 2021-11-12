@@ -47,6 +47,27 @@
 <hr>
 
 <!-- outline buttons -->
+<button class="btn btn-outline-primary">Perferendis!</button>
+<button class="btn btn-outline-secondary">Expedita.</button>
+<button class="btn btn-outline-success">Expedita?</button>
+<button class="btn btn-outline-info">Repellendus.</button>
+<button class="btn btn-outline-warning">Adipisci.</button>
+<button class="btn btn-outline-danger">Sit.</button>
+<button class="btn btn-outline-dark">Facilis.</button>
+<button class="btn btn-outline-light">Est.</button>
+<button class="btn btn-outline-link">Commodi.</button>
+
+<hr>
+<!-- button.btn.btn-primary>lorem1 -->
+<button class="btn btn-primary">Lorem.</button>
+
+<input type="button" value="lorem" class="btn btn-primary">
+
+<input type="submit" value="submit" class="btn btn-primary">
+
+<a href="#" class="btn btn-primary">lorem</a>
+
+
 
 
 
