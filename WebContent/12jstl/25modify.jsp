@@ -22,10 +22,8 @@
 	<c:set value="${applicationScope.books[param.index] }" var="book" />
 
 	<div class="container">
+		<a class="btn btn-secondary btn-block" href="25list-book-tag.jsp">책 목록 보기</a>
 		<h1>책 수정</h1>
-		<a href="25list-book-tag.jsp">책 목록 보기</a>
-		<hr>
-
 		<div class="row ">
 			<div class="col-6">
 				<form action="25modify-process.jsp" method="post">
