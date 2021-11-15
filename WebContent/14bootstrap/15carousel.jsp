@@ -26,9 +26,14 @@
         <!-- h1>lorem3^p>lorem -->
         <h1>Lorem ipsum dolor.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eius ipsa nam amet dolores atque molestias placeat rerum doloribus voluptatem asperiores sit vel iure excepturi earum tempora architecto commodi optio.</p>
+
+        <!-- button.myBtn*3 -->
+        <button class="myBtn" data-number="0">0</button>
+        <button class="myBtn" data-number="1">1</button>
+        <button class="myBtn" data-number="2">2</button>
       </div>
       <div class="col">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1000" data-pause="false">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="false">
 
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
@@ -61,6 +66,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  <script>
+			$(document).ready(function() {
+				$(".myBtn").click(function() {
+					let number = Number($(this).attr("data-number"));
+					$("#carouselExampleSlidesOnly").carousel(number);
+				});
+			});
+		</script>
 </body>
 </html>
 
