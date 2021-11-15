@@ -37,6 +37,9 @@
   .my-container3 {
     height: 300px;
     background-color: silver;
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
   }
   
   .my-item3 {
@@ -62,7 +65,7 @@
   <hr>
   
   <!-- .my-container3>.my-item3{center} -->
-  <div class="my-container3">
+  <div class="my-container3 d-flex justify-content-center align-items-center">
   	<div class="my-item3">center</div>
   </div>
 
