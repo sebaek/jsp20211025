@@ -62,6 +62,24 @@
     </div>
   </div>
 
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- nav>ul.pagination -->
+        <nav>
+          <ul class="pagination">
+            <c:forEach begin="1" end="10" var="i">
+              <li class="page-item ${param.cpage eq i ? 'active' : '' }"><a href="#" class="page-link">${i }</a></li>
+            </c:forEach>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
