@@ -26,6 +26,15 @@
   	<servlet-name>servlet0103</servlet-name>
   	<url-pattern>/servlet01/servlet03</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>servlet0104</servlet-name>
+  	<servlet-class>servlet01.S04Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servlet0104</servlet-name>
+  	<url-pattern>/servlet01/servlet04</url-pattern>
+  </servlet-mapping>
 </web-app>
 
 
