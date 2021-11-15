@@ -25,11 +25,21 @@
     <div class="row">
       <nav aria-label="Page navigation example">
         <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -47,10 +57,14 @@
             <c:forEach begin="1" end="10" var="i">
 
               <c:if test="${param.cpage eq i }" var="current">
-                <li class="page-item active"><a href="#" class="page-link">${i }</a></li>
+                <li class="page-item active">
+                  <a href="#" class="page-link">${i }</a>
+                </li>
               </c:if>
               <c:if test="${not current }">
-                <li class="page-item"><a href="#" class="page-link">${i }</a></li>
+                <li class="page-item">
+                  <a href="#" class="page-link">${i }</a>
+                </li>
               </c:if>
 
               <!-- li.page-item>a.page-link -->
@@ -71,7 +85,9 @@
         <nav>
           <ul class="pagination">
             <c:forEach begin="1" end="10" var="i">
-              <li class="page-item ${param.cpage eq i ? 'active' : '' }"><a href="#" class="page-link">${i }</a></li>
+              <li class="page-item ${param.cpage eq i ? 'active' : '' }">
+                <a href="#" class="page-link">${i }</a>
+              </li>
             </c:forEach>
           </ul>
         </nav>
