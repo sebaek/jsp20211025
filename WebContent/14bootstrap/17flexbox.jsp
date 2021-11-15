@@ -33,8 +33,18 @@
   .my-item2 {
     background-color: gold;
   }
+  
+  .my-container3 {
+    height: 300px;
+    background-color: silver;
+  }
+  
+  .my-item3 {
+    height: 50px;
+    width: 200px;
+    background-color: gold;
+  }
 </style>
-
 <title>Insert title here</title>
 </head>
 <body>
@@ -47,6 +57,13 @@
   <!-- .my-container2>.my-item2>lorem3 -->
   <div class="my-container2 d-flex justify-content-center">
   	<div class="my-item2">Lorem ipsum dolor.</div>
+  </div>
+  
+  <hr>
+  
+  <!-- .my-container3>.my-item3{center} -->
+  <div class="my-container3">
+  	<div class="my-item3">center</div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
