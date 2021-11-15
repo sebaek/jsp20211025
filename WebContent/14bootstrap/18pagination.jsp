@@ -45,10 +45,15 @@
         <nav>
           <ul class="pagination">
             <c:forEach begin="1" end="10" var="i">
+
+              <c:if test="${param.cpage eq i }" var="current">
+                <li class="page-item active"><a href="#" class="page-link">${i }</a></li>
+              </c:if>
+              <c:if test="${not current }">
+                <li class="page-item"><a href="#" class="page-link">${i }</a></li>
+              </c:if>
+
               <!-- li.page-item>a.page-link -->
-              <li class="page-item">
-              	<a href="#" class="page-link">${i }</a>
-              </li>
             </c:forEach>
           </ul>
         </nav>
