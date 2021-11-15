@@ -28,7 +28,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eius ipsa nam amet dolores atque molestias placeat rerum doloribus voluptatem asperiores sit vel iure excepturi earum tempora architecto commodi optio.</p>
       </div>
       <div class="col">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1000">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1000" data-pause="false">
 
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
