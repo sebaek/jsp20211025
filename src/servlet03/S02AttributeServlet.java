@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class S02AttributeServlet
  */
-@WebServlet("/S02AttributeServlet")
+@WebServlet("/servlet03/s02")
 public class S02AttributeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,8 +26,14 @@ public class S02AttributeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		// 4. 데이터를 request attribute로 저장
+		request.setAttribute("food", "pizza");
+		
+		// 5. forward
+		String path = "/WEB-INF/view/servlet03/s02.jsp";
+		request.getRequestDispatcher(path).forward(request, response);
+
 	}
 
 	/**
