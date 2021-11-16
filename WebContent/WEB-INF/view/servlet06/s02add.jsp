@@ -17,7 +17,14 @@
   <!-- .container>.row>.col>h1{할 일 추가} -->
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-2">
+        <nav class="nav flex-column">
+          <a class="nav-link" href="${pageContext.request.contextPath }/servlet06/main">메인</a>
+          <a class="nav-link" href="${pageContext.request.contextPath }/servlet06/add">추가</a>
+          <a class="nav-link" href="${pageContext.request.contextPath }/servlet06/list">목록</a>
+        </nav>
+      </div>
+      <div class="col-10">
         <h1>할 일 추가</h1>
         <form action="${pageContext.request.contextPath }/servlet06/add" method="post">
 
@@ -29,9 +36,6 @@
 
           <input type="submit" class="btn btn-primary" value="추가">
         </form>
-
-        <a href="${pageContext.request.contextPath }/servlet06/add" class="btn btn-primary">추가</a>
-        <a href="${pageContext.request.contextPath }/servlet06/list" class="btn btn-secondary">목록</a>
       </div>
     </div>
   </div>
