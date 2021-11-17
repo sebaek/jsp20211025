@@ -1,13 +1,13 @@
 package filter03;
 
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 
 /**
  * Servlet Filter implementation class F09Filter
@@ -42,7 +42,8 @@ public class F09Filter implements Filter {
 		// pass the request along the filter chain
 		if (user != null && user.equals("notok")) {
 			// param user가 notok이면 서블릿 실행하지 않음
-			
+			String path = "/WEB-INF/view/filter03/09notok.jsp";
+			request.getRequestDispatcher(path).forward(request, response);
 		} else {
 			chain.doFilter(request, response);
 		}
