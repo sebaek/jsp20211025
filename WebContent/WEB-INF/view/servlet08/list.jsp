@@ -45,7 +45,8 @@
               <th>가격</th>
               <th>출판사</th>
               <th>재고</th>
-              <th>비고</th>
+              <th>삭제</th>
+              <th>수정</th>
             </tr>
           </thead>
           <tbody>
@@ -65,6 +66,15 @@
                   <button class="btn btn-danger removeBtn" data-toggle="modal" data-target="#confirmModal1" data-link="${removeUrl }">
                     <i class="fas fa-trash"></i>
                   </button>
+                </td>
+                <td>
+                  <c:url value="/servlet08/modify" var="modifyUrl" >
+                    <c:param name="id" value="${status.index }" />
+                  </c:url>
+                  <!-- a.btn.btn-warning>i.fas.fa-pencil -->
+                  <a href="${modifyUrl }" class="btn btn-warning">
+                  	<i class="fas fa-edit"></i>
+                  </a>
                 </td>
               </tr>
             </c:forEach>
