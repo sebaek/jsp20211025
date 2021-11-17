@@ -54,6 +54,25 @@
   	<filter-name>f04filter</filter-name>
   	<url-pattern>/filterex1/s04</url-pattern>
   </filter-mapping>
+  
+  <filter>
+  	<filter-name>f05filter</filter-name>
+  	<filter-class>filter02.F05Filter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>f05filter</filter-name>
+  	<url-pattern>/filterex2/s01</url-pattern>
+  	<url-pattern>/filterex2/s02</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>f06filter</filter-name>
+  	<filter-class>filter02.F06Filter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>f06filter</filter-name>
+  	<url-pattern>/filterex2/*</url-pattern>
+  </filter-mapping>
 </web-app>
 
 
