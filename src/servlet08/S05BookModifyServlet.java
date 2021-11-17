@@ -43,6 +43,7 @@ public class S05BookModifyServlet extends HttpServlet {
 		Bean06 book = list.get(index);
 		
 		// 4. attribute 추가
+		request.setAttribute("index", index);
 		request.setAttribute("book", book);
 		
 		// 5. forward/redirect
@@ -54,8 +55,37 @@ public class S05BookModifyServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// 0. 사전작업
+		HttpSession session = request.getSession();
+		List<Bean06> list = (List<Bean06>) session.getAttribute("books");
+		
+		request.setCharacterEncoding("utf-8");
+		
+		// 2. request 분석/가공
+		String indexStr = request.getParameter("index");
+		String title = request.getParameter("title");
+		String writer = request.getParameter("writer");
+		String priceStr = request.getParameter("price");
+		String publisher = request.getParameter("publisher");
+		String stockStr = request.getParameter("stock");
+		
+		int index = Integer.parseInt(indexStr);
+		int price = Integer.parseInt(priceStr);
+		int stock = Integer.parseInt(stockStr);
+		
+		// 3. 비지니스 로직
+		Bean06 book = list.get(index);
+		book.setTitle(title);
+		book.setWriter(writer);
+		book.setPrice(price);
+		book.setPublisher(publisher);
+		book.setStock(stock);
+		
+		// 4. attribute
+		
+		// 5. forward/redirect
+		String location = request.getContextPath() + "/servlet08/list";
+		response.sendRedirect(location);
 	}
 
 }

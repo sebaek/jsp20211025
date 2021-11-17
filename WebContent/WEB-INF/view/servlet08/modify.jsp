@@ -36,6 +36,7 @@
         <%-- main contents --%>
         <h1>책 수정</h1>
         <form method="post">
+          <input type="hidden" name="index" value="${index }">
           <!-- .form-group*5>label+input.form-control -->
           <div class="form-group">
             <label>제목</label>
