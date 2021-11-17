@@ -104,6 +104,14 @@
 		<url-pattern>/filterex3/*</url-pattern>
 	</filter-mapping>
 
+	<filter>
+		<filter-name>f10filter</filter-name>
+		<filter-class>filter04.F10MemberFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f10filter</filter-name>
+		<url-pattern>/filterex4/member</url-pattern>
+	</filter-mapping>
 </web-app>
 
 

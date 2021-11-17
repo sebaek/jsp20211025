@@ -1,24 +1,25 @@
-package filter03;
+package filter04;
 
 import java.io.IOException;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet Filter implementation class F09Filter
+ * Servlet Filter implementation class F10MemberFilter
  */
-// @WebFilter("/F09Filter")
-public class F09Filter implements Filter {
+// @WebFilter("/F10MemberFilter")
+public class F10MemberFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public F09Filter() {
+    public F10MemberFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -35,17 +36,16 @@ public class F09Filter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-		System.out.println("9번 필터 일함");
+		HttpSession session = request.getSession();
 		
-		String user = request.getParameter("user");
+		String logedIn = session.getAttribute("logedIn");
 
-		if (user != null && user.equals("notok")) {
-			// param user가 notok이면 서블릿 실행하지 않음
-			String path = "/WEB-INF/view/filter03/09notok.jsp";
-			request.getRequestDispatcher(path).forward(request, response);
-		} else {
-			// pass the request along the filter chain
+		// pass the request along the filter chain
+		if (logedIn != null && logedIn.equals("ok")) {
 			chain.doFilter(request, response);
+		} else {
+			String location = request.getContextPath() + "/filterex4/login";
+			response.sendRedirect(location);
 		}
 	}
 
