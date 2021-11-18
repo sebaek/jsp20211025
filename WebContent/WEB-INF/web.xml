@@ -12,6 +12,11 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<!-- ServletContextListener 설정 -->
+	<listener>
+		<listener-class>listener01.AppListener03</listener-class>
+	</listener>
 
 	<!-- 세션 설정 -->
 	<session-config>
