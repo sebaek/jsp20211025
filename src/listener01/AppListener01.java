@@ -23,6 +23,7 @@ public class AppListener01 implements ServletContextListener {
      */
     public void contextDestroyed(ServletContextEvent sce)  { 
          // TODO Auto-generated method stub
+    	System.out.println("어플리케이션 종료됨!! 리스너1 작동!!!!");
     }
 
 	/**
