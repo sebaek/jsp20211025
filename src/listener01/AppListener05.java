@@ -31,6 +31,11 @@ public class AppListener05 implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce)  { 
     	ServletContext application = sce.getServletContext();
     	application.setAttribute("appAttr1", "appVal1");
+    	application.setAttribute("appAttr2", "appVal2");
+    	
+    	// context path를 application attribute에 추가
+    	String contextPath = application.getContextPath();
+    	application.setAttribute("appRoot", contextPath);
     }
 	
 }
