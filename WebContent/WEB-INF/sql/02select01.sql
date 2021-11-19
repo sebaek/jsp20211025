@@ -27,7 +27,7 @@ DESC Customers;
 DESC Employees;
 
 -- Categories 테이블의 컬럼을 조회
-
+DESC Categories;
 
 
 
