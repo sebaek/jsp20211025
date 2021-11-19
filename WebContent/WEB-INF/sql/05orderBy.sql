@@ -27,6 +27,7 @@ SELECT * FROM Customers ORDER BY Country DESC, CustomerName;
 SELECT * FROM Customers ORDER BY Country DESC, CustomerName ASC; -- ASC : 생략 가능
 
 -- 고객을 Country ASC, City ASC, 고객명 DESC 정렬 조회
+SELECT * FROM Customers ORDER BY Country, City, CustomerName DESC;
 
 
 
