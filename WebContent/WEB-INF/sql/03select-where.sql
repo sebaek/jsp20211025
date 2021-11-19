@@ -20,6 +20,16 @@ SELECT * FROM Customers WHERE CustomerID != 1; -- 같지 않다.
 
 -- Employees 테이블의 EmployeeID를 사용해서 위 연산자 연습
 
+-- 비교 연산 사용시 주의
+SELECT * FROM Customers WHERE CustomerID = 1;   -- number와 string 연산시 형변환 일어남 (string->number)
+SELECT * FROM Customers WHERE CustomerID = '1'; 
+
+SELECT * FROM Customers WHERE CustomerID <= '3';
+
+SELECT * FROM Customers WHERE Country >= 'Mexico'; -- 사전순(캐릭터코드) 비교
+SELECT * FROM Customers WHERE Country < 'Mexico'; 
+
+SELECT * FROM Customers WHERE Country >= 'mexico'; -- 대소문자 구분 안함
 
 
 
