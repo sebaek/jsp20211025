@@ -47,10 +47,16 @@ public class JDBC01Servlet extends HttpServlet {
 			if (rs.next()) {
 				String name = rs.getString(1);
 				System.out.println(name);
+				
+				request.setAttribute("customerName", name);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		// forward
+		String view = "/WEB-INF/view/jdbc01/v01.jsp";
+		request.getRequestDispatcher(view).forward(request, response);
 	}
 
 	/**
