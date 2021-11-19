@@ -2,12 +2,17 @@ package jdbc01;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Properties;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+
+import org.mariadb.jdbc.MariaDbPoolDataSource;
 
 /**
  * Application Lifecycle Listener implementation class JDBCListener1
@@ -52,6 +57,26 @@ public class JDBCListener1 implements ServletContextListener {
     		System.out.println(props.get("password"));
     		System.out.println(props.get("ip"));
     		System.out.println(props.get("schema"));
+    		
+    		// jdbc:mariadb://ip:port/schema?user=username&password=password
+    		
+    		String ip = props.getProperty("ip");
+    		String schema = props.getProperty("schema");
+    		String user = props.getProperty("user");
+    		String password = props.getProperty("password");
+    		
+    		String dburl = "jdbc:mariadb://" + ip + "/" + schema + "?user=" + user + "&password=" + password ;
+    		
+    		System.out.println(dburl);
+    		
+    		MariaDbPoolDataSource pool = new MariaDbPoolDataSource(dburl);
+
+    		Connection connection = pool.getConnection();
+    		Statement stmt = connection.createStatement();
+    		ResultSet rs = stmt.executeQuery("SELECT 333");
+    		if (rs.next()) {
+    			System.out.println(rs.getInt(1)); // 333 출력되면 쿼리 실행 OK
+    		}
     		
     	} catch (Exception e) {
     		e.printStackTrace();
