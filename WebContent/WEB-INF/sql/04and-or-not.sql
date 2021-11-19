@@ -15,7 +15,20 @@ SELECT CustomerName FROM Customers WHERE Country = 'Germany' AND City = 'Berlin'
 SELECT * FROM Customers WHERE City = 'Paris' OR Country = 'UK';
 
 
--- Customers 테이블에서 Country 가 Gernamy 이거나 Country 가 Spain 인 행 조회
+-- Customers 테이블에서 Country 가 Germany 이거나 Country 가 Spain 인 행 조회
+SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';
+
+-- NOT : 조건에 해당하지 않은 것
+SELECT * FROM Customers WHERE NOT Country = 'UK';
+
+-- Customers 테이블에서 Country 가 Germany 가 아닌 행 조회(NOT 키워드 사용)
+SELECT * FROM Customers WHERE NOT Country = 'Germany';
+
+-- 나라는 독일이고 도시는 베를린 또는 뮌헨
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='München');
+
+-- 나라는 독일이고 도시는 베를린이나 뮌헨이 아닌 행 조회
 
 
 
