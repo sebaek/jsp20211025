@@ -29,8 +29,21 @@ SELECT * FROM Customers
 WHERE Country='Germany' AND (City='Berlin' OR City='München');
 
 -- 나라는 독일이고 도시는 베를린이나 뮌헨이 아닌 행 조회
+SELECT * FROM Customers
+WHERE Country='Germany' AND NOT (City='Berlin' OR City='München');
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City != 'Berlin' AND City != 'München');
 
+-- 나라가 독일과 미국이 아닌 행 조회
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
 
+-- 나라가 독일이거나 미국인 행 조회
+SELECT * FROM Customers 
+WHERE Country = 'Germany' OR Country = 'USA';
+
+SELECT * FROM Customers
+WHERE NOT Country!='Germany' OR NOT Country!='USA';
 
 
 
