@@ -53,7 +53,11 @@ public class JDBC03Servlet extends HttpServlet {
 			// 3.3 쿼리 실행 (resultSet 얻기)
 			rs = stmt.executeQuery(sql);
 			// 3.4 resultSet 처리
+			while (rs.next()) {
+				System.out.println(rs.getString(1));
+			}
 			
+			System.out.println("ResultSet 처리 종료!!");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
