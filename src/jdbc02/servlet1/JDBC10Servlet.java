@@ -46,7 +46,7 @@ public class JDBC10Servlet extends HttpServlet {
 
 		// 2. request 분석
 
-		// 3. business login
+		// 3. business logic
 		String sql = "SELECT " + 
 				"    SupplierID," + 
 				"    SupplierName," + 
