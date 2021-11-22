@@ -49,7 +49,7 @@ public class JDBC07Servlet extends HttpServlet {
 		// 2. request 분석/가공
 
 		// 3. business logic
-		String sql = "SELECT CustomerName, ContactName, Address FROM Customers WHERE CustomerID = 1";
+		String sql = "SELECT CustomerName, ContactName, Address, City FROM Customers WHERE CustomerID = 1";
 
 		try {
 			// 1. connection 얻기
@@ -65,6 +65,7 @@ public class JDBC07Servlet extends HttpServlet {
 				bean.setCustomerName(rs.getString(i++));
 				bean.setContactName(rs.getString(i++));
 				bean.setAddress(rs.getString(i++));
+				bean.setCity(rs.getString(i++));
 			}
 
 		} catch (Exception e) {

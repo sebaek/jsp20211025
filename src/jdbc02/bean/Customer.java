@@ -4,6 +4,15 @@ public class Customer {
 	private String customerName;
 	private String contactName;
 	private String address;
+	private String city;
+	
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCity() {
+		return city;
+	}
 
 	public String getCustomerName() {
 		return customerName;
