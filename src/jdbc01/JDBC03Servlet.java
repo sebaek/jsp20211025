@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -40,6 +42,8 @@ public class JDBC03Servlet extends HttpServlet {
 		Statement stmt = null;
 		ResultSet rs = null;
 		
+		List<String> names = new ArrayList<>();
+		
 		// 2. request 정보 분석/가공
 		
 		// 3. 비지니스 로직 (주로 db 작업)
@@ -54,7 +58,8 @@ public class JDBC03Servlet extends HttpServlet {
 			rs = stmt.executeQuery(sql);
 			// 3.4 resultSet 처리
 			while (rs.next()) {
-				System.out.println(rs.getString(1));
+//				System.out.println(rs.getString(1));
+				names.add(rs.getString(1));
 			}
 			
 			System.out.println("ResultSet 처리 종료!!");
@@ -89,8 +94,11 @@ public class JDBC03Servlet extends HttpServlet {
 		
 		
 		// 4. add attribute 추가 
+		request.setAttribute("names", names);
 		
 		// 5. forward or redirect
+		String path = "";
+		request.getRequestDispatcher(path).forward(request, response);
 	
 	}
 	
