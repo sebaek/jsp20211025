@@ -18,6 +18,7 @@
 
 <h1>고객명 : ${customerName }</h1>
 <h1>계약명 : ${contactName }</h1>
+<h1>주소 : ${address }</h1>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

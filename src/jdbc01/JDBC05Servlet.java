@@ -44,11 +44,12 @@ public class JDBC05Servlet extends HttpServlet {
 		
 		String contactName = "";
 		String customerName = "";
+		String address = "";
 
 		// 2. request 분석/가공
 
 		// 3. business logic
-		String sql = "SELECT CustomerName, ContactName FROM Customers WHERE CustomerID = 1";
+		String sql = "SELECT CustomerName, ContactName, Address FROM Customers WHERE CustomerID = 1";
 		
 		try {
 			// 1. connection 얻기
@@ -61,6 +62,7 @@ public class JDBC05Servlet extends HttpServlet {
 			if (rs.next()) {
 				customerName = rs.getString(1);
 				contactName = rs.getString(2);
+				address = rs.getString(3);
 			}
 			
 			
@@ -95,6 +97,7 @@ public class JDBC05Servlet extends HttpServlet {
 		// 4. add attribute
 		request.setAttribute("contactName", contactName);
 		request.setAttribute("customerName", customerName);
+		request.setAttribute("address", address);
 
 		// 5. forward / redirect
 		String path = "/WEB-INF/view/jdbc01/v05.jsp";
