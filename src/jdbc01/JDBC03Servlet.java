@@ -97,7 +97,7 @@ public class JDBC03Servlet extends HttpServlet {
 		request.setAttribute("names", names);
 		
 		// 5. forward or redirect
-		String path = "";
+		String path = "/WEB-INF/view/jdbc01/v03.jsp";
 		request.getRequestDispatcher(path).forward(request, response);
 	
 	}
