@@ -45,13 +45,14 @@ public class JDBC08Servlet extends HttpServlet {
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-		
+
 		List<Customer> list = new ArrayList<>();
 
 		// 2. request 분석/가공
 
 		// 3. business logic
-		String sql = "SELECT CustomerName, ContactName, Address, City FROM Customers";
+		String sql = "SELECT " + "CustomerName, " + "ContactName, " + "Address, " + "City, " + "CustomerID, "
+				+ "PostalCode, " + "Country " + " FROM Customers ";
 
 		try {
 			// 1. connection 얻기
@@ -69,7 +70,11 @@ public class JDBC08Servlet extends HttpServlet {
 				bean.setContactName(rs.getString(i++));
 				bean.setAddress(rs.getString(i++));
 				bean.setCity(rs.getString(i++));
-				
+
+				bean.setCustomerID(rs.getInt(i++));
+				bean.setPostalCode(rs.getString(i++));
+				bean.setCountry(rs.getString(i++));
+
 				list.add(bean);
 			}
 
