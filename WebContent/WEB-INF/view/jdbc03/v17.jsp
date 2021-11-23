@@ -21,16 +21,19 @@
         <form action="">
           <!-- .form-group>label+select.form-control#select1>option*3 -->
           <div class="form-group">
-          	<label for="select1">국가 선택</label>
-          	<select name="country" id="select1" class="form-control">
+            <label for="select1">국가 선택</label>
+            <select name="country" id="select1" class="form-control">
+              <%--
           		<option value="UK">UK</option>
-          		<option value="USA">USA</option>
-          		<option value="Japan">Japan</option>
-          	</select>
+             --%>
+              <c:forEach items="${countryList }" var="country">
+                <option value="${country }" ${country eq param.country ? 'selected' : '' }>${country }</option>
+              </c:forEach>
+            </select>
           </div>
-          
-          <!-- input:s -->
-          <input type="submit" value="검색">
+
+          <!-- input:s.btn.btn-primary -->
+          <input class="btn btn-primary" type="submit" value="검색">
         </form>
       </div>
     </div>
