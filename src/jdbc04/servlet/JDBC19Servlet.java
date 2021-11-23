@@ -47,17 +47,16 @@ public class JDBC19Servlet extends HttpServlet {
 		List<String> countryList = new ArrayList<>();
 		List<Customer> customerList = new ArrayList<>();
 		
+		// 2. request 파라미터 분석/가공
+		String country = request.getParameter("country");
+		
 		try (Connection con = ds.getConnection();) {
-			// 2. request 파라미터 분석/가공
-			String country = request.getParameter("country");
-	
 			// 3. business logic
 			// 3.1 country 리스트 조회
 			countryList = dao.getCountryList(con);
 	
 			// 3.2 customer 리스트 조회
 			customerList = dao.getCustomerListByCountry(con, country);
-		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
