@@ -21,7 +21,7 @@
         <form action="">
           <!-- .input-group.mb-3>input.form-control+.input-group-append>input:s.btn.btn-outline-secondary -->
           <div class="input-group mb-3">
-            <input type="text" class="form-control" name="country">
+            <input type="text" class="form-control" name="country" value="${param.country }">
             <div class="input-group-append">
               <input type="submit" value="검색" class="btn btn-outline-secondary">
             </div>
