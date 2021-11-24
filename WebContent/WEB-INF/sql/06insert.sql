@@ -12,4 +12,16 @@ INSERT INTO Customers (CustomerID, CustomerName, ContactName, Address, City, Pos
 VALUES (95, 'Park', 'JiSung', 'Yeoksam', 'Seoul', '77777', 'Korea');
 
 -- 96번째, 97번째 records 추가 sql 작성, 실행
+INSERT INTO Customers (CustomerName) VALUES ('Cha');
+
+INSERT INTO Customers (CustomerID, CustomerName) VALUES (97, 'Son');
+INSERT INTO Customers (CustomerID, CustomerName) VALUES (97, 'Ji');
+
+INSERT INTO Customers (CustomerName) VALUES ('jimin');
+INSERT INTO Customers (CustomerName) VALUES ('bts');
+INSERT INTO Customers (CustomerName) VALUES ('hot');
+
+-- 두 개의 row(record, data)를 CustomerID 컬럼의 값을 직접 작성하지 않고 추가하는 sql 작성/실행
+
+
 
