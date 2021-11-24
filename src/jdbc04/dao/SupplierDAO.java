@@ -62,4 +62,47 @@ public class SupplierDAO {
 		return list;
 	}
 
+	public boolean insert(Connection con, Supplier supplier) {
+		String sql = "INSERT INTO Suppliers (SupplierName, ContactName, Address, City, PostalCode, Country, Phone) "
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?) ";
+		boolean ok = false;
+		
+		try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+			
+			// 물음표 채우기
+			int i = 1;
+			pstmt.setString(i++, supplier.getSupplierName());
+			pstmt.setString(i++, supplier.getContactName());
+			pstmt.setString(i++, supplier.getAddress());
+			pstmt.setString(i++, supplier.getCity());
+			pstmt.setString(i++, supplier.getPostalCode());
+			pstmt.setString(i++, supplier.getCountry());
+			pstmt.setString(i++, supplier.getPhone());
+			
+			ok = pstmt.executeUpdate() == 1;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return ok;
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
