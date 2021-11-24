@@ -24,9 +24,10 @@ SET
     Country = ?
 WHERE
     CustomerID = ?
+;
 
-
-
+-- Suppliers
+SELECT * FROM Suppliers ORDER BY SupplierID DESC;
 
 
 
