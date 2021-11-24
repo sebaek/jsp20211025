@@ -22,7 +22,7 @@
 			<h1>고객 등록</h1>
             
             <!-- form>.form-group*6>label+input.form-control#input$ -->
-            <form action="">
+            <form method="post">
             	<div class="form-group">
             		<label for="input1">Customer Name</label>
             		<input type="text" class="form-control" id="input1" name="customerName">
