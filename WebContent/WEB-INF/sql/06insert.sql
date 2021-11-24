@@ -22,6 +22,18 @@ INSERT INTO Customers (CustomerName) VALUES ('bts');
 INSERT INTO Customers (CustomerName) VALUES ('hot');
 
 -- 두 개의 row(record, data)를 CustomerID 컬럼의 값을 직접 작성하지 않고 추가하는 sql 작성/실행
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('ses', 'sm', 'gangnam', 'Seoul', '33333', 'Korea');
+
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('finkl', 'ds', 'samseong', 'Seoul', '22222', 'Korea');
+
+
+
+
+
+
+
 
 
 
