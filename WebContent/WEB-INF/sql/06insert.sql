@@ -29,7 +29,10 @@ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Cou
 VALUES ('finkl', 'ds', 'samseong', 'Seoul', '22222', 'Korea');
 
 
-
+-- 
+SELECT * FROM Suppliers ORDER BY SupplierID DESC;
+INSERT INTO Suppliers (SupplierName, ContactName, Address, City, PostalCode, Country, Phone)
+VALUE (?, ?, ?, ?, ?, ?, ?);
 
 
 
