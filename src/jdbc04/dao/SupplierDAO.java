@@ -121,4 +121,48 @@ public class SupplierDAO {
 		return rowCount == 1;
 	}
 
+	public Supplier selectById(Connection con, int supplierID) {
+		String sql = "SELECT SupplierName, "
+				+ "          ContactName, "
+				+ "          Address, "
+				+ "          City, "
+				+ "          PostalCode,"
+				+ "          Country, "
+				+ "          Phone "
+				+ "   FROM Suppliers "
+				+ "   WHERE SupplierID = ?";
+		
+		Supplier supplier = new Supplier();
+		
+		try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+			pstmt.setInt(1, supplierID);
+			
+			try (ResultSet rs = pstmt.executeQuery()) {
+				
+				if (rs.next()) {
+					supplier.setAddress(rs.getString("Address"));
+					supplier.setSupplierName(rs.getString("SupplierName"));
+					supplier.setContactName(rs.getString("ContactName"));
+					supplier.setCity(rs.getString("City"));
+					supplier.setPostalCode(rs.getString("PostalCode"));
+					supplier.setCountry(rs.getString("Country"));
+					supplier.setPhone(rs.getString("Phone"));
+					supplier.setSupplierID(supplierID);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return supplier;
+	}
+
 }
+
+
+
+
+
+
+
+
