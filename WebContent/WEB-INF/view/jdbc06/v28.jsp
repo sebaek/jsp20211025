@@ -21,6 +21,7 @@
 		<div class="col">
 			<h1>공급자 수정</h1>
 			<form action="" method="post">
+                <input type="hidden" name="supplierID" value="${supplier.supplierID }">
 				<div class="form-group">
 					<label for="input1">Supplier Name</label>
 					<input type="text" class="form-control" id="input1" name="supplierName" value="${supplier.supplierName }">
