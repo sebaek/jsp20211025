@@ -37,5 +37,22 @@ INSERT INTO mytable7 (col2) VALUES (100.123);
 
 INSERT INTO mytable7 (col2) VALUES (1100.12);
 
+-- 연습:  mytable8 만들기 
+CREATE TABLE mytable8 (
+	id INT,
+    name VARCHAR(255),
+    password VARCHAR(255),
+    score DOUBLE
+);
+
+DESC mytable8;
+
+
+
+
+
+
+
+
 
 
