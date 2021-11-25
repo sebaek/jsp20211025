@@ -21,7 +21,8 @@
         <h1>고객 수정</h1>
         
         <!-- form>(.form-group>label[for=input$]+input.form-control#input$[name])*5 -->
-        <form action="">
+        <form action="" method="post">
+            <input type="hidden" name="customerID" value="${customer.customerID }">
         	<div class="form-group">
         		<label for="input1">CustomerName</label>
         		<input value="${customer.customerName }" type="text" class="form-control" id="input1" name="customerName">
@@ -51,6 +52,9 @@
                   </c:forEach>
                 </select>
             </div>
+            
+            <!-- input:s.btn.btn-outline-primary -->
+            <input type="submit" value="수정" class="btn btn-outline-primary">
         </form>
         
       </div>
