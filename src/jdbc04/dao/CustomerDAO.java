@@ -151,6 +151,25 @@ public class CustomerDAO {
 		return customer;
 	}
 
+	public boolean deleteById(Connection con, int customerID) {
+		String sql = "DELETE FROM Customers "
+				+ "   WHERE CustomerID = ?";
+		
+		try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+			
+			pstmt.setInt(1, customerID);
+			
+			int count = pstmt.executeUpdate();
+			
+			return count == 1;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+
 }
 
 
