@@ -31,7 +31,9 @@ DESC mytable19Student;
 SELECT * FROM mytable19Student;
 INSERT INTO mytable19Student (name, birth, address) VALUES ('kim', '2000-01-01', 'seoul');
 
-
+DESC Customers;
+DESC Employees;
+DESC Suppliers;
 
 
 
