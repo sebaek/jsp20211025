@@ -2,7 +2,8 @@ package jdbc08;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -13,16 +14,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 /**
- * Servlet implementation class JDBC31Servlet
+ * Servlet implementation class JDBC32Servlet
  */
-@WebServlet("/jdbc08/s31")
-public class JDBC31Servlet extends HttpServlet {
+@WebServlet("/jdbc08/s32")
+public class JDBC32Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public JDBC31Servlet() {
+    public JDBC32Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,25 +36,28 @@ public class JDBC31Servlet extends HttpServlet {
 		ServletContext application = request.getServletContext();
 		DataSource ds = (DataSource) application.getAttribute("dbpool");
 		
-		
-		String sql = "INSERT INTO mytable10 (col1, col2, col3, col4, col5, col6, col7) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		String sql = "SELECT col1, col2, col3, col4, col5, col6, col7 FROM mytable10";
 		
 		try (Connection con = ds.getConnection();
-				PreparedStatement pstmt = con.prepareStatement(sql)) {
+				Statement stmt = con.createStatement();
+				ResultSet rs = stmt.executeQuery(sql);) {
 			
-			pstmt.setInt(1, 9999999); // INT
-			pstmt.setDouble(2, 3.14); // DOUBLE
-			pstmt.setDouble(3, 1234567.1234); // DEC(10 , 3 )
-			pstmt.setString(4, "ABC"); // CHAR(3)
-			pstmt.setString(5, "Hello World"); // VARCHAR(255)
-			pstmt.setDate(6, java.sql.Date.valueOf("2021-11-26")); // DATE
-			pstmt.setTimestamp(7, java.sql.Timestamp.valueOf("2021-11-26 09:33:12")); // DATETIME
-			
-			pstmt.executeQuery();
+			while (rs.next()) {
+				int col1 = rs.getInt("col1"); // INT
+				double col2 = rs.getDouble("col2"); // DOUBLE
+				double col3 = rs.getDouble("col3"); // DEC(10, 3)
+				String col4 = rs.getString("col4"); // CHAR(3)
+				String col5 = rs.getString("col5"); // VARCHAR(255)
+				java.sql.Date col6 = rs.getDate("col6"); // DATE
+				java.sql.Timestamp col7 = rs.getTimestamp("col7"); // DATETIME
+				
+				System.out.println(col1 + ", " + col2 + ", " + col3 + ", " + col4 + ", " + col5 + ", " + col6 + ", " + col7);
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	/**
@@ -65,6 +69,7 @@ public class JDBC31Servlet extends HttpServlet {
 	}
 
 }
+
 
 
 
