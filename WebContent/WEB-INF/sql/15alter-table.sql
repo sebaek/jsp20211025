@@ -14,6 +14,9 @@ ALTER TABLE mytable19Student ADD COLUMN (
 
 ALTER TABLE mytable19Student DROP COLUMN foot;
 
+-- AFTER, BEFORE
+ALTER TABLE mytable19Student ADD foot DOUBLE AFTER name;
+DESC mytable19Student;
 
 
 
