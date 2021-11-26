@@ -17,6 +17,28 @@ CREATE TABLE mytable18 (
 
 DESC mytable18;
 
+-- 
+
+CREATE TABLE mytable19Student (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(30) NOT NULL,
+    birth DATE NOT NULL,
+    address VARCHAR(255) NOT NULL
+);
+
+DESC mytable19Student;
+
+SELECT * FROM mytable19Student;
+INSERT INTO mytable19Student (name, birth, address) VALUES ('kim', '2000-01-01', 'seoul');
+
+
+
+
+
+
+
+
+
 
 
 
