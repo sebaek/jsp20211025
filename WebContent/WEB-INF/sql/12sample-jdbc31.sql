@@ -11,3 +11,16 @@ CREATE TABLE mytable10 (
 );
 
 SELECT * FROM mytable10;
+
+
+-- JDBC37Servlet, JDBC38Servlet
+CREATE TABLE mytable11 (
+	name VARCHAR(255),
+    age INT,
+    birth DATE
+);
+
+
+
+
+
