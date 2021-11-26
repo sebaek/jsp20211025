@@ -20,6 +20,8 @@ CREATE TABLE mytable11 (
     birth DATE
 );
 
+SELECT * FROM mytable11;
+
 
 
 
