@@ -45,7 +45,18 @@ SELECT * FROM mytable15;
 INSERT INTO mytable15 (col1, col2) VALUES (-1000, 100);
 INSERT INTO mytable15 (col1, col2) VALUES (-1000, 300);
 
+-- DEFAULT
+CREATE TABLE mytable16 (
+	col1 INT DEFAULT 0,
+    col2 VARCHAR(5) DEFAULT 'a',
+    col3 DATE DEFAULT NOW(),
+    col4 DATETIME DEFAULT NOW()
+);
+SELECT * FROM mytable16;
 
+INSERT INTO mytable16 VALUES (); 
+INSERT INTO mytable16 (col1) VALUES (10);
+INSERT INTO mytable16 (col3, col4) VALUES ('1999-11-26', '1999-11-11 11:22:33');
 
 
 
