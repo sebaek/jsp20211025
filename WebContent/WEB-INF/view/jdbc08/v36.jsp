@@ -15,19 +15,21 @@
 </head>
 <body>
 
-  <!-- .container>.row>.col>table.table>thead>th*7^tbody -->
+  <!-- .container>.row>.col>table.table>thead>tr>th*7^^tbody -->
   <div class="container">
     <div class="row">
       <div class="col">
         <table class="table">
           <thead>
-            <th>c1</th>
-            <th>c2</th>
-            <th>c3</th>
-            <th>c4</th>
-            <th>c5</th>
-            <th>c6</th>
-            <th>c7</th>
+            <tr>
+              <th>c1</th>
+              <th>c2</th>
+              <th>c3</th>
+              <th>c4</th>
+              <th>c5</th>
+              <th>c6</th>
+              <th>c7</th>
+            </tr>
           </thead>
           <tbody>
             <c:forEach items="${list }" var="bean">
