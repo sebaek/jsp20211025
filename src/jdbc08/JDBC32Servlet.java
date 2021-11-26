@@ -43,13 +43,16 @@ public class JDBC32Servlet extends HttpServlet {
 				ResultSet rs = stmt.executeQuery(sql);) {
 			
 			while (rs.next()) {
-				int col1 = rs.getInt("col1"); // INT
-				double col2 = rs.getDouble("col2"); // DOUBLE
-				double col3 = rs.getDouble("col3"); // DEC(10, 3)
+//				int col1 = rs.getInt("col1"); // INT
+				Integer col1 = rs.getInt("col1"); // INT
+//				double col2 = rs.getDouble("col2"); // DOUBLE
+				Double col2 = rs.getDouble("col2"); // DOUBLE
+//				double col3 = rs.getDouble("col3"); // DEC(10, 3)
+				Double col3 = rs.getDouble("col3"); // DEC(10, 3)
 				String col4 = rs.getString("col4"); // CHAR(3)
 				String col5 = rs.getString("col5"); // VARCHAR(255)
-				java.sql.Date col6 = rs.getDate("col6"); // DATE
-				java.sql.Timestamp col7 = rs.getTimestamp("col7"); // DATETIME
+				java.sql.Date col6 = rs.getDate("col6"); // DATE			
+				java.sql.Timestamp col7 = rs.getTimestamp("col7"); // DATETIME			
 				
 				System.out.println(col1 + ", " + col2 + ", " + col3 + ", " + col4 + ", " + col5 + ", " + col6 + ", " + col7);
 			}
