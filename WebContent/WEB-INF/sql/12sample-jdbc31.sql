@@ -9,3 +9,5 @@ CREATE TABLE mytable10 (
     col6 DATE,
     col7 DATETIME
 );
+
+SELECT * FROM mytable10;
