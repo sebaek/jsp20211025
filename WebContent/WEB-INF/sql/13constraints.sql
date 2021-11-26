@@ -58,6 +58,12 @@ INSERT INTO mytable16 VALUES ();
 INSERT INTO mytable16 (col1) VALUES (10);
 INSERT INTO mytable16 (col3, col4) VALUES ('1999-11-26', '1999-11-11 11:22:33');
 
+-- DESC
+DESC mytable16;
+
+DESC mytable12;
+DESC mytable13;
+DESC mytable14;
 
 
 
