@@ -45,7 +45,8 @@ SELECT * FROM Customers; -- 고객 이름
 SELECT c.CustomerName name, o.OrderDate date 
 FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID;
 
-
+-- 예제 : 어떤 직원이 어느 날짜에 주문 받았는지 조회
+-- 사용 테이블: Orders, Employees
 
 
 
