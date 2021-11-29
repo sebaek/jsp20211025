@@ -20,6 +20,20 @@ SELECT * FROM mytable27Customer, mytable28Tel; -- cartesign product (카테시�
 
 SELECT * FROM mytable27Customer JOIN mytable28Tel ON mytable27Customer.id = mytable28Tel.customerId;
 
+-- alias (별칭)
+SELECT * FROM mytable27Customer AS t27 JOIN mytable28Tel AS t28 ON t27.id = t28.customerId;
+SELECT * FROM mytable27Customer t27 JOIN mytable28Tel t28 ON t27.id = t28.customerId; -- AS 생략 가능
 
+SELECT t27.id, t27.firstName, t28.id, t28.tel 
+FROM mytable27Customer t27 JOIN mytable28Tel t28 
+ON t27.id = t28.customerId;
+
+SELECT t27.id AS 고객번호, t27.firstName AS 이름, t28.id AS 전화ID, t28.tel AS 전화번호
+FROM mytable27Customer t27 JOIN mytable28Tel t28 
+ON t27.id = t28.customerId;
+
+SELECT t27.id 고객번호, t27.firstName 이름, t28.id 전화ID, t28.tel 전화번호 -- AS 생략 가능
+FROM mytable27Customer t27 JOIN mytable28Tel t28 
+ON t27.id = t28.customerId;
 
 
