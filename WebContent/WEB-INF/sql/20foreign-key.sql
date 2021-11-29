@@ -26,4 +26,15 @@ SELECT * FROM mytable28Tel;
 INSERT INTO mytable28Tel (customerId, tel) VALUES (3, '01066666666'); -- 참조키가 존재하지 않는 오류 발생
 
 
+-- 삭제 
+DELETE FROM mytable27Customer WHERE id = 2; -- 전화번호 테이블에서 참조하는 중이어서 삭제 안됨
+
+DELETE FROM mytable28Tel WHERE customerId = 2;
+DELETE FROM mytable27Customer WHERE id = 2; -- ok
+
+SELECT * FROM mytable28Tel;
+SELECT * FROM mytable27Customer;
+
+
+
 
