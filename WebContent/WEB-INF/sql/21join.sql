@@ -47,7 +47,16 @@ FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID;
 
 -- 예제 : 어떤 직원이 어느 날짜에 주문 받았는지 조회
 -- 사용 테이블: Orders, Employees
-
+SELECT e.LastName, e.FirstName, o.OrderDate
+FROM Employees e JOIN Orders o 
+     ON e.EmployeeID = o.EmployeeID
+ORDER BY o.OrderDate
+     ;
+SELECT e.LastName, e.FirstName, o.OrderDate
+FROM Employees e JOIN Orders o 
+     ON e.EmployeeID = o.EmployeeID
+ORDER BY e.LastName, e.FirstName
+     ;
 
 
 
