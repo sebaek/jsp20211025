@@ -25,5 +25,10 @@ SELECT * FROM mytable27Customer c LEFT JOIN mytable28Tel t ON c.id = t.customerI
 UNION
 SELECT * FROM mytable27Customer c RIGHT JOIN mytable28Tel t ON c.id = t.customerId;
 
-
+-- 연습 : 고객명과, 직원의 LastName을 하나의 컬럼으로 조회
+SELECT CustomerName FROM Customers
+UNION
+SELECT LastName FROM Employees
+ORDER BY 1
+;
 
