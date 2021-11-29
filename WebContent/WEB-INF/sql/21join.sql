@@ -18,7 +18,7 @@ SELECT * FROM mytable28Tel;
 SELECT * FROM mytable27Customer, mytable28Tel; -- cartesign product (카테시안 곱) ; 조인 조건 없을 시
 -- SELECT * FROM mytable28Tel, mytable27Customer; 
 
-
+SELECT * FROM mytable27Customer JOIN mytable28Tel ON mytable27Customer.id = mytable28Tel.customerId;
 
 
 
