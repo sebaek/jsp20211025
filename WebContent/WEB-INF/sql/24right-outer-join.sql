@@ -13,6 +13,14 @@ WHERE c.id IS NULL;
 
 -- 연습1 : 주문한 적 없는 고객명 오름차순 조회
 -- 사용테이블 : Customers, Orders
+SELECT c.CustomerName 
+FROM Orders o RIGHT JOIN Customers c ON o.CustomerID = c.CustomerID
+WHERE o.OrderID IS NULL 
+ORDER BY 1;
 
 -- 연습2 : 주문한 받은 적 없는 직원명 오름차순 조회
 -- 사용테이블 : Employees, Orders
+SELECT e.LastName, e.FirstName
+FROM Orders o RIGHT JOIN Employees e ON o.EmployeeID = e.EmployeeID
+WHERE o.OrderID IS NULL
+ORDER BY 1, 2;
