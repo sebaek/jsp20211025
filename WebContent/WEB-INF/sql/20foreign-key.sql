@@ -35,6 +35,20 @@ DELETE FROM mytable27Customer WHERE id = 2; -- ok
 SELECT * FROM mytable28Tel;
 SELECT * FROM mytable27Customer;
 
+-- foreign key 제약사항삭제
+SHOW CREATE TABLE mytable28Tel;
+'CREATE TABLE `mytable28Tel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `customerId` int(11) DEFAULT NULL,
+  `tel` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `customerId` (`customerId`),
+  CONSTRAINT `mytable28Tel_ibfk_1` FOREIGN KEY (`customerId`) REFERENCES `mytable27Customer` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci'
+;
+ALTER TABLE mytable28Tel DROP FOREIGN KEY mytable28Tel_ibfk_1;
 
-
-
+-- 제약사항 삭제 후 고객테이블 먼저 삭제
+DELETE FROM mytable27Customer WHERE id = 1;
+SELECT * FROM mytable27Customer;
+SELECT * FROM mytable28Tel;
