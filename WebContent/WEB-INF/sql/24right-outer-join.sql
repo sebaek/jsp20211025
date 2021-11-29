@@ -24,3 +24,4 @@ SELECT e.LastName, e.FirstName
 FROM Orders o RIGHT JOIN Employees e ON o.EmployeeID = e.EmployeeID
 WHERE o.OrderID IS NULL
 ORDER BY 1, 2;
+
