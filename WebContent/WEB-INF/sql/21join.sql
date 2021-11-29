@@ -36,4 +36,21 @@ SELECT t27.id 고객번호, t27.firstName 이름, t28.id 전화ID, t28.tel 전�
 FROM mytable27Customer t27 JOIN mytable28Tel t28 
 ON t27.id = t28.customerId;
 
+-- 예제 : 고객이 주문한 날짜 조회
+-- 사용 테이블: Orders, Customers
+
+SELECT * FROM Orders; -- 주문한 날짜
+SELECT * FROM Customers; -- 고객 이름
+
+SELECT c.CustomerName name, o.OrderDate date 
+FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID;
+
+
+
+
+
+
+
+
+
 
