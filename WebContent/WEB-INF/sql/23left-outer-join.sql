@@ -11,5 +11,5 @@ SELECT *
 FROM mytable27Customer c LEFT JOIN mytable28Tel t ON c.id = t.customerId
 WHERE t.id IS NULL;
 
--- 연습 : 주문한 적 없는 고객명 조회
+-- 연습 : 주문한 적 없는 고객명 오름차순 조회
 -- 사용테이블 : Customers, Orders
