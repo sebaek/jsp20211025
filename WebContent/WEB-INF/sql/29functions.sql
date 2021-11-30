@@ -22,7 +22,17 @@ SELECT count(*) FROM OrderDetails od JOIN Products p ON od.ProductID = p.Product
 WHERE ct.CategoryName = 'Seafood';
 
 -- 연습4 : Seafood를 한 번이라도 주문한 적이 있는 고객 수 조회
+SELECT c.CustomerID, c.CustomerName, ct.CategoryName FROM Orders o JOIN Customers c ON o.CustomerID = c.CustomerID
+                       JOIN OrderDetails od ON o.OrderID = od.OrderID
+                       JOIN Products p ON p.ProductID = od.ProductID
+                       JOIN Categories ct ON p.CategoryID = ct.CategoryID
+WHERE ct.CategoryName = 'Seafood'
+ORDER BY 1;
 
-
-
+SELECT count(DISTINCT c.CustomerID) FROM Orders o JOIN Customers c ON o.CustomerID = c.CustomerID
+                       JOIN OrderDetails od ON o.OrderID = od.OrderID
+                       JOIN Products p ON p.ProductID = od.ProductID
+                       JOIN Categories ct ON p.CategoryID = ct.CategoryID
+WHERE ct.CategoryName = 'Seafood'
+ORDER BY 1;
 
