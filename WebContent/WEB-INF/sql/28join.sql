@@ -15,3 +15,12 @@ FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID
                  JOIN Shippers s ON o.ShipperID = s.ShipperID
 ORDER BY 1
 ;
+
+-- 주문 상세 내용도 추가 조회
+SELECT c.ContactName, o.OrderDate, p.ProductName, od.Quantity, s.ShipperName, s.Phone
+FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID
+                 JOIN Shippers s ON o.ShipperID = s.ShipperID
+                 JOIN OrderDetails od ON o.OrderID = od.OrderID
+                 JOIN Products p ON od.ProductID = p.ProductID
+ORDER BY 1
+;
