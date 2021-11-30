@@ -12,4 +12,15 @@ HAVING count(OrderID) = 1
 ;
 
 -- 연습2 : 주문을 한번만 또는 한번도안한(0) 고객들 조회 (CustomerID, CustomerName, 주문수)
+SELECT c.CustomerID, c.CustomerName, count(o.OrderID) count
+FROM Orders o RIGHT JOIN Customers c ON o.CustomerID = c.CustomerID
+GROUP BY c.CustomerID
+HAVING count(o.OrderID) <= 1
+ORDER BY count, c.CustomerId
+;
+
+
+
+
+
 
