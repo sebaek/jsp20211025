@@ -33,6 +33,5 @@ SELECT count(DISTINCT c.CustomerID) FROM Orders o JOIN Customers c ON o.Customer
                        JOIN OrderDetails od ON o.OrderID = od.OrderID
                        JOIN Products p ON p.ProductID = od.ProductID
                        JOIN Categories ct ON p.CategoryID = ct.CategoryID
-WHERE ct.CategoryName = 'Seafood'
-ORDER BY 1;
+WHERE ct.CategoryName = 'Seafood';
 
