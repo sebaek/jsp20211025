@@ -6,5 +6,11 @@ ORDER BY 1
 ;
 
 -- 연습1 : 나라별 Supplier 수 조회
+SELECT Country, count(SupplierID) FROM Suppliers
+GROUP BY Country
+ORDER BY 2
+;
+
+-- 연습2 : 가장 많은 고객이 있는 나라(들) 조회
 
 
