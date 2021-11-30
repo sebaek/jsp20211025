@@ -10,3 +10,8 @@ ORDER BY 1;
 -- 어떤 고객이 어떤 배송자(Shipper)를 사용했는 지 조회
 -- 컬럼:고객명, 주문날짜, 배송자명, 배송자 전화번호
 -- 테이블:Customers, Orders, Shippers
+SELECT c.ContactName, o.OrderDate, s.ShipperName, s.Phone
+FROM Customers c JOIN Orders o ON c.CustomerID = o.CustomerID
+                 JOIN Shippers s ON o.ShipperID = s.ShipperID
+ORDER BY 1
+;
