@@ -27,7 +27,12 @@ HAVING count(o.OrderID) <= 1
 ;
 
 
-
+-- 
+SELECT 
+    Country, City, COUNT(CustomerID)
+FROM
+    Customers
+GROUP BY Country , City;
 
 
 
