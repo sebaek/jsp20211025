@@ -31,3 +31,5 @@ WHERE
             GROUP BY Country) A)
 ;
 
+-- 연습3 : 가장 적은 고객이 있는 나라(들) 조회
+
