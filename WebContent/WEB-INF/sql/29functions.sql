@@ -17,7 +17,11 @@ SELECT count(DISTINCT city) FROM Suppliers;
 SELECT count(DISTINCT country) FROM Suppliers;
 
 -- 연습3 : Seafood가 몇 번 주문되었는 지 조회
+SELECT count(*) FROM OrderDetails od JOIN Products p ON od.ProductID = p.ProductID
+                              JOIN Categories ct ON p.CategoryID = ct.CategoryID
+WHERE ct.CategoryName = 'Seafood';
 
+-- 연습4 : Seafood를 한 번이라도 주문한 적이 있는 고객 수 조회
 
 
 
