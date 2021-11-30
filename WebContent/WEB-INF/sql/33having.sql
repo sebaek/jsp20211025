@@ -19,6 +19,13 @@ HAVING count(o.OrderID) <= 1
 ORDER BY count, c.CustomerId
 ;
 
+-- 연습3 : 주문을 한번 또는 0번 받은 직원들 조회
+SELECT e.EmployeeID, e.LastName, e.FirstName, count(o.OrderID)
+FROM Employees e LEFT JOIN Orders o ON e.EmployeeID = o.EmployeeID
+GROUP BY e.EmployeeID
+HAVING count(o.OrderID) <= 1
+;
+
 
 
 
