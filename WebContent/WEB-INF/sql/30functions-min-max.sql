@@ -10,7 +10,7 @@ SELECT MAX(Price) LargestPrice FROM Products; -- AS 생략 가능
 SELECT MIN(BirthDate) FROM Employees;
 SELECT MAX(BirthDate) FROM Employees;
 
--- 쿼리안에 쿼리 (nested query)
+-- 쿼리안에 쿼리 (nested query, subquery)
 SELECT * FROM Employees
 WHERE BirthDate = (SELECT MIN(BirthDate) FROM Employees); -- 주의: = 연산자 사용시 subquery 결과는 단일(1row)
 
