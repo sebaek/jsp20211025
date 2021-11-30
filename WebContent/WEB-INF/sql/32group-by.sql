@@ -62,7 +62,12 @@ SELECT o.CustomerID, c.CustomerName, Count(o.OrderID) '주문수'
 FROM Orders o JOIN Customers c ON o.CustomerID = c.CustomerID
 GROUP BY o.CustomerID;
 
-
+-- 연습 5 : 고객별 총 주문한 수량 (CustomerID, 총 주문 수량)
+-- tables : Orders, OrderDetails
+SELECT o.CustomerID, c.CustomerName, sum(Quantity) '총 주문 수량'
+FROM Orders o JOIN OrderDetails od ON o.OrderID = od.OrderID
+              JOIN Customers c ON o.CustomerID = c.CustomerID
+GROUP BY o.CustomerID;
 
 
 
