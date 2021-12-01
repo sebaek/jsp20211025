@@ -29,4 +29,18 @@ SELECT now();
 --      단, Address, City, PostalCode, Country 컬럼을
 --          ','를 구분자로 하여 연결된 값을 
 --          FullAddress라는 컬럼으로 조회
---          또한 Address, City, PostalCode, Country 중 null값인 경우 빈 스트링'' 으로 연결 
+--          또한 Address, City, PostalCode, Country 중 null값이 있는 경우
+--               그 컬럼은 빈 스트링'' 으로 연결 
+SELECT 
+    CustomerID,
+    CustomerName,
+    ContactName,
+    CONCAT(IFNULL(Address, ''),
+            ', ',
+            IFNULL(City, ''),
+            ', ',
+            IFNULL(PostalCode, ''),
+            ', ',
+            IFNULL(Country, '')) FullAddress
+FROM
+    Customers;
