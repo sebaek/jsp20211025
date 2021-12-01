@@ -57,6 +57,7 @@ public class JDBC41Servlet extends HttpServlet {
 
 			int total = dao.getTotal(con);
 			endPage = (int) Math.ceil(((double) total) / rowPerPage);
+//			endPage = ((total - 1) / rowPerPage) + 1;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

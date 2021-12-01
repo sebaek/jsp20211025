@@ -56,6 +56,8 @@ SELECT * FROM Customers
 ORDER BY CustomerID 
 LIMIT ?, ?;
 
+DESC Customers;
+
 
 
 
