@@ -13,8 +13,12 @@ WHERE Country NOT IN ('Germany', 'Mexico', 'USA');
 
 
 -- 연습1 : 국가가 'USA', 'UK'인 Supplier들 조회 (IN 키워드 사용)
+SELECT * FROM Suppliers WHERE Country IN ('usa', 'uk');
+-- 연습2 : 국가가 'USA', 'UK'가 아닌 Supplier들 조회 (NOT IN 키워드 사용)
+SELECT * FROM Suppliers WHERE Country NOT IN ('usa', 'uk');
 
--- 연습1 : 국가가 'USA', 'UK'가 아닌 Supplier들 조회 (NOT IN 키워드 사용)
+SELECT * FROM Products;
+SELECT * FROM Categories;
 
-
+-- 연습3 : Meat 또는 Seafood 카테고리에 속한 상품명 조회
 
