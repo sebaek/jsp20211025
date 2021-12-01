@@ -25,7 +25,7 @@ SELECT * FROM Customers
 WHERE CustomerName LIKE 'Ernst Hande_'; -- _ : 한글자 아무거나 
 
 
--- 연습3 : jdbc10 -> dao의 쿼리
+-- 연습3 : jdbc10 -> dao의 쿼리 변경해서 동작하도록.
 SELECT employeeID, lastName, firstName, birthDate, notes
 FROM Employees
 WHERE note LIKE ?
