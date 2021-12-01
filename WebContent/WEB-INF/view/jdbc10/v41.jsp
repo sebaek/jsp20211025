@@ -47,6 +47,23 @@
         </table>
       </div>
     </div>
+
+    <!-- pagenation -->
+    <div class="row justify-content-center">
+      <!-- nav>ul.pagination>li.page-item*9>a.page-link[href='#']{$} -->
+      <nav>
+        <ul class="pagination">
+          <c:forEach begin="1" end="9" var="num">
+            <c:url value="/jdbc10/s41" var="link">
+              <c:param name="page" value="${num }"></c:param>
+            </c:url>
+            <li class="page-item ${num eq param.page ? 'active' : '' } ${empty param.page and num eq 1 ? 'active' : ''}">
+              <a href="${link }" class="page-link">${num }</a>
+            </li>
+          </c:forEach>
+        </ul>
+      </nav>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
