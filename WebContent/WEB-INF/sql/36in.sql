@@ -40,6 +40,12 @@ WHERE CategoryID IN ( SELECT CategoryID FROM Categories WHERE CategoryName IN  (
 SELECT country
 FROM Suppliers;
 
+SELECT * 
+FROM Customers
+WHERE Country IN (SELECT country 
+                  FROM Suppliers)
+;
+
 
 
 
