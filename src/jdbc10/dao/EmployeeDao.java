@@ -14,10 +14,14 @@ public class EmployeeDao {
 		List<Employee> list = new ArrayList<Employee>();
 		String sql = "SELECT employeeID, lastName, firstName, notes, birthDate "
 				+ "FROM Employees "
-				+ "WHERE notes LIKE ?";
+				+ "WHERE notes LIKE ? "
+				+ "     OR firstName LIKE ? "
+				+ "     OR lastName LIKE ? ";
 		
 		try (PreparedStatement pstmt = con.prepareStatement(sql)) {
 			pstmt.setString(1, "%" + keyword + "%");
+			pstmt.setString(2, "%" + keyword + "%");
+			pstmt.setString(3, "%" + keyword + "%");
 			try (ResultSet rs = pstmt.executeQuery()) {
 				while (rs.next()) {
 					Employee emp = new Employee();
