@@ -21,4 +21,18 @@ SELECT * FROM Products;
 SELECT * FROM Categories;
 
 -- 연습3 : Meat 또는 Seafood 카테고리에 속한 상품명 조회
+SELECT * FROM Products p JOIN Categories c ON p.CategoryID = c.CategoryID
+WHERE CategoryName LIKE 'Meat%' OR CategoryName = 'Seafood'
+;
+SELECT * FROM Products p JOIN Categories c ON p.CategoryID = c.CategoryID
+WHERE CategoryName IN ('Meat/Poultry', 'Seafood')
+;
+
+-- SUBQUERY 활용
+SELECT * FROM Categories WHERE CategoryName IN  ('Meat/Poultry', 'Seafood');
+
+SELECT * FROM Products WHERE CategoryID IN (6, 8);
+
+SELECT * FROM Products 
+WHERE CategoryID IN ( SELECT CategoryID FROM Categories WHERE CategoryName IN  ('Meat/Poultry', 'Seafood') );
 
