@@ -20,3 +20,6 @@ WHERE LastName LIKE '%u%';
 -- 연습2 : Employees 에서 Notes 에 'BA'가 포함된 직원들 조회
 SELECT * FROM Employees
 WHERE Notes LIKE '%BA%';
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'Ernst Hande_'; -- _ : 한글자 아무거나 
