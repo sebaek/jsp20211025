@@ -36,7 +36,25 @@ LIMIT 10, 5;
 -- .....
 -- n 페이지 LIMIT (n-1)*10, 10
 
+-- ----------------
+-- 한 페이지에 x개의 데이터 조회
+-- 1 페이지 LIMIT 0, x
+-- 2 페이지 LIMIT x, x
+-- 3 페이지 LIMIT x*2, x
+-- .....
+-- n 페이지 LIMIT (n-1)*x, x
 
+-- > 마지막은 몇 페이지?
+-- 필요한 값: 총 records 수 (SELECT COUNT(*) FROM tableName)
+-- 총 records의 수는 99일 때 페이지당 x개의 데이터 출력 시 마지막은 몇 페이지?
+
+-- 99 / x : (몫 + 1) 또는 (몫)
+--                        나누어 떨어질때
+
+SELECT count(*) FROM Customers;
+SELECT * FROM Customers
+ORDER BY CustomerID 
+LIMIT ?, ?;
 
 
 
