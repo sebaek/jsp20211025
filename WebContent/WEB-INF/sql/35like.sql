@@ -23,3 +23,15 @@ WHERE Notes LIKE '%BA%';
 
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'Ernst Hande_'; -- _ : 한글자 아무거나 
+
+
+-- 연습3 : dao의 쿼리
+SELECT employeeID, lastName, firstName, birthDate, notes
+FROM Employees
+WHERE note LIKE ?
+      OR lastName LIKE ?
+      OR firstName LIKE ?
+
+;
+
+
