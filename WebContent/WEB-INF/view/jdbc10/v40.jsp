@@ -30,21 +30,21 @@
           <div class="col">
             <!-- .form-group.row>label[for=select1].col-2.col-form-label+.col-10>select.form-control#select1 -->
             <div class="form-group row">
-            	<label for="select1" class="col-2 col-form-label">태어난 해</label>
-            	<div class="col-10">
-            		<select name="year" id="select1" class="form-control">
-                      <c:forEach begin="1928" end="1969" var="year">
-                        <option value="${year }">${year }</option>
-                      </c:forEach>
-                    </select>
-            	</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" name="keyword" placeholder="검색어를 입력하세요">
-              <div class="input-group-append">
-                <button class="btn btn-outline-primary">검색</button>
+              <label for="select1" class="col-2 col-form-label">태어난 해</label>
+              <div class="col-4">
+                <select name="year" id="select1" class="form-control">
+                  <c:forEach begin="1928" end="1969" var="year">
+                    <option value="${year }">${year }</option>
+                  </c:forEach>
+                </select>
+              </div>
+              <div class="col-6">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" name="keyword" placeholder="검색어를 입력하세요">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary">검색</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
