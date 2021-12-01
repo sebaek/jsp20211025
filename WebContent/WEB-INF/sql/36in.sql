@@ -36,3 +36,10 @@ SELECT * FROM Products WHERE CategoryID IN (6, 8);
 SELECT * FROM Products 
 WHERE CategoryID IN ( SELECT CategoryID FROM Categories WHERE CategoryName IN  ('Meat/Poultry', 'Seafood') );
 
+-- 연습4 : Supplier가 있는 나라에 살고 있는 고객 목록 조회
+SELECT country
+FROM Suppliers;
+
+
+
+
