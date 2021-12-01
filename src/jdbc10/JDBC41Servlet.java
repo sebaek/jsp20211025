@@ -41,6 +41,7 @@ public class JDBC41Servlet extends HttpServlet {
 		DataSource ds = (DataSource) application.getAttribute("dbpool");
 		CustomerDao dao = new CustomerDao();
 		List<Customer> list = null;
+		int endPage = 1;
 
 		// 2 request
 		String pageStr = request.getParameter("page");
@@ -53,12 +54,16 @@ public class JDBC41Servlet extends HttpServlet {
 		// 3 business logic
 		try (Connection con = ds.getConnection()) {
 			list = dao.getListPaging(con, page, rowPerPage);
+
+			int total = dao.getTotal(con);
+			endPage = (int) Math.ceil(((double) total) / rowPerPage);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 		// 4 add attribute
 		request.setAttribute("list", list);
+		request.setAttribute("endPage", endPage);
 
 		// 5.forward
 		String path = "/WEB-INF/view/jdbc10/v41.jsp";

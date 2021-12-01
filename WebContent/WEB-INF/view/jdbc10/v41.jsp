@@ -53,7 +53,7 @@
       <!-- nav>ul.pagination>li.page-item*9>a.page-link[href='#']{$} -->
       <nav>
         <ul class="pagination">
-          <c:forEach begin="1" end="9" var="num">
+          <c:forEach begin="1" end="${endPage }" var="num">
             <c:url value="/jdbc10/s41" var="link">
               <c:param name="page" value="${num }"></c:param>
             </c:url>
