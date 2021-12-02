@@ -53,6 +53,15 @@ COMMIT;
 
 SELECT * FROM mytable29Bank;
 
+ROLLBACK; -- commit 이후 ROLLBACK은 적용안됨
+
+-- auto commit 활성화
+SET autocommit = 1;
+
+UPDATE mytable29Bank SET money = 30000 WHERE id = 1;
+SELECT * FROM mytable29Bank;
+
+ROLLBACK;
 
 
 
