@@ -2,6 +2,7 @@ package jdbc11;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -56,24 +57,52 @@ public class JDBC42Servlet extends HttpServlet {
 		int money = Integer.parseInt(moneyStr);
 
 		// 3. business logic
-		// 3.0 auto commit disabled
-		// 3.1 1번 출금
-		try (Connection con = ds.getConnection()) {
+		Connection con = null;
+		try {
+			con = ds.getConnection();
+			// 3.0 auto commit disabled
+			con.setAutoCommit(false);
+			
+			// 3.1 1번 출금
 			Bank bank1 = dao.getBankById(con, 1); // 1번 계좌 조회
 			bank1.setMoney(bank1.getMoney() - money);
 
 			dao.update(con, bank1); // 1번 계좌 update (출금)
-
+			
+			// 문제 발생!!!
+			/*
+			String a = "a";
+			Integer.parseInt(a);
+			*/
+			
 			// 3.2 2번 입금
 			Bank bank2 = dao.getBankById(con, 2); // 2번 계좌 조회
 			bank2.setMoney(bank2.getMoney() + money);
 
 			dao.update(con, bank2); // 2번 계좌 update (입금)
+			
+			// 3.99 commit
+			con.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
+			
+			if (con != null) {
+				try {
+					con.rollback();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+			}
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 
-		// 3.99 commit
 
 		// 4. add attribute
 
