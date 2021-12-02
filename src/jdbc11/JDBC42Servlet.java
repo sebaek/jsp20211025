@@ -39,10 +39,10 @@ public class JDBC42Servlet extends HttpServlet {
 		// 2. request 분석/가공
 		
 		// 3. business logic
-		// 3.0 auto commit disabled
-		// 3.1 1번 출금
-		// 3.2 2번 입금
-		// 3.99 commit
+		//   3.0 auto commit disabled
+		//   3.1 1번 출금
+		//   3.2 2번 입금
+		//   3.99 commit
 		
 		// 4. add attribute
 		
